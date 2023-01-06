@@ -37,5 +37,53 @@
   },
   "videre.qmd": {
     "videre.html": "335ebad4"
+  },
+  "kursbok/dag1.qmd": {
+    "dag1.html": "256ba59f"
+  },
+  "kursbok/indeksering.qmd": {
+    "indeksering.html": "426088bd"
+  },
+  "kursbok/datatype.qmd": {
+    "datatype.html": "32654c1f"
+  },
+  "kursbok/kontroll.qmd": {
+    "kontroll.html": "94bda2d1"
+  },
+  "kursbok/loops.qmd": {
+    "loops.html": "aa14b875"
+  },
+  "kursbok/dag2.qmd": {
+    "dag2.html": "1a45c2d9"
+  },
+  "kursbok/funksjoner.qmd": {
+    "funksjoner.html": "e2a53562"
+  },
+  "kursbok/videre.qmd": {
+    "videre.html": "bdd49e20"
+  },
+  "./kursbok/dag1.qmd": {
+    "dag1.html": "f21c2c96"
+  },
+  "./kursbok/indeksering.qmd": {
+    "indeksering.html": "6d8fc637"
+  },
+  "./kursbok/datatype.qmd": {
+    "datatype.html": "b2393fee"
+  },
+  "./kursbok/kontroll.qmd": {
+    "kontroll.html": "7a60126d"
+  },
+  "./kursbok/loops.qmd": {
+    "loops.html": "24aaf3fd"
+  },
+  "./kursbok/dag2.qmd": {
+    "dag2.html": "68a4d3df"
+  },
+  "./kursbok/funksjoner.qmd": {
+    "funksjoner.html": "fd5e2cbe"
+  },
+  "./kursbok/videre.qmd": {
+    "videre.html": "df5bf175"
   }
 }
