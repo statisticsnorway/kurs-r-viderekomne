@@ -1,0 +1,46 @@
+---
+title: "Indeksering"
+editor: visual
+---
+
+## Vektorer
+
+Vektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:
+
+```{r}
+alder <- c(49, 39, 51, 73, 41)
+alder * 2
+```
+
+Vi kan kjøre tester på alle elementer i en vektor. For eks:
+
+```{r}
+alder == 39
+```
+
+## Indeksering
+
+Ved bruk av **`[ ]`** kan vi hente ut elementer i en vektor (eller datasett). I R (i motsetting til Python), starter indeksering fra 1! For å hente ut første element for eks:
+
+```{r}
+alder[1]
+```
+
+For å ekskludere et element kan vi bruke -indeks. For eks:
+
+```{r}
+alder[-1]
+```
+
+For å hente ut flere elementer kan vi spesifisere et sekvens
+
+```{r}
+alder[1:4]
+```
+
+Vi kan også bruke indeksering til å endre et spesifikk element. For eks:
+
+```{r}
+alder[1] <- 48
+alder[1]
+```

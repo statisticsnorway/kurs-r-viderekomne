@@ -1,0 +1,79 @@
+---
+title: "Data typer"
+editor: visual
+---
+
+## Lister
+
+Lister samler objekter/vektorer/datasett. De kan har forskjellige type og størrelser.
+
+![](./images/liste.PNG)
+
+Vi lager lister ved å bruke `list()`.
+
+```{r}
+kommune_list <- list(sted = c("Oslo", "Kongsvinger", "Halden"), 
+                     snitt_lonn = c(636, 504, 552), 
+                     antall_lonnstakere = c(467400, 8300, 12600),
+                     nivaa = "Kommune")
+kommune_list
+```
+
+Vi kan bruke **\$** for å få tilgang til et vektor eller element i en liste.
+
+```{r}
+kommune_list$snitt_lonn
+```
+
+Vi kan kombinere dette med `[ ]` for å hente ut elementer.
+
+```{r}
+kommune_list$snitt_lonn[1]
+```
+
+## Datasett
+
+Datasett er lister som samler vektorer med samme lengde.
+
+![Eksempel datasett](/images/datasett.PNG)
+
+Vi bruke `data.frame()` for å lage en vanlig R datasett
+
+```{r}
+kommune_data <- data.frame(sted = c("Oslo", "Kongsvinger", "Halden"), 
+                          antall_lonnstakere = c(467400, 8300, 12600))
+```
+
+Igjen, vi kan bruke **\$** for å få tilgang til et vektor og `[ ]` for å hente ut elementer.
+
+```{r}
+kommune_data$snitt_lonn[2]
+```
+
+NB: I *tidyverse* bruker vi variabelnavn istedenfor `$`.Dette har konsekvenser for kjøretid og noen begrensninger men *tidyverse* er veldig intuitiv og givende pakke for analysering av data.
+
+Noen nyttige funksjoner som kan benyttes ved datasett
+
+```{r}
+nrow(kommune_data)
+ncol(kommune_data)
+```
+
+```{r}
+head(kommune_data)
+```
+
+```{r, message=FALSE}
+library(tidyverse)
+glimpse(kommune_data)
+```
+
+## Forskjellige datasett typer
+
+Det er forskjlellige måte å formatere data i R. Disse er mest vanlig:
+
+| Data frame type         | Code for formatting |
+|-------------------------|---------------------|
+| Normal data frame       | `data.frame()`      |
+| tibble (tidyverse)      | `as_tibble()`       |
+| data table (data.table) | `data.table()`      |

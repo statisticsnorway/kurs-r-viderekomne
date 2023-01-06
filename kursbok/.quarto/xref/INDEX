@@ -1,0 +1,41 @@
+{
+  "index.qmd": {
+    "index.html": "0f022505"
+  },
+  "introduksjon.qmd": {
+    "introduksjon.html": "4f3f9052"
+  },
+  "about.qmd": {
+    "about.html": "c9a38eac"
+  },
+  "dag1.qmd": {
+    "dag1.html": "582349e6"
+  },
+  "indeksering.qmd": {
+    "indeksering.html": "a291e0af"
+  },
+  "datatype.qmd": {
+    "datatype.html": "1bb1a5b4"
+  },
+  "sortering.qmd": {
+    "sortering.html": "155fafb4"
+  },
+  "kontroll.qmd": {
+    "kontroll.html": "bc0293cc"
+  },
+  "loops.qmd": {
+    "loops.html": "22eca78a"
+  },
+  "dag2.qmd": {
+    "dag2.html": "264700a8"
+  },
+  "funksjoner.qmd": {
+    "funksjoner.html": "a8f2ad02"
+  },
+  "klassR.qmd": {
+    "klassR.html": "40d482fe"
+  },
+  "videre.qmd": {
+    "videre.html": "335ebad4"
+  }
+}

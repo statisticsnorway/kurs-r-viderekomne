@@ -1,0 +1,54 @@
+---
+title: "Løkker"
+editor: visual
+---
+
+For å gjøre den samme prosessen flere ganger kan vi lage løkker. Løkker har noen fordeler:
+
+-   Vi slipper å skrive den samme koden flere ganger.
+
+-   Enklere å endre noe verdier/variabler i koden (kun ett sted).
+
+-   Hvis vi finner en feil, da trenger vi kun å rette det ett sted.
+
+## For-løkker
+
+For-løkker brukes til å kjøre gjennom kode et bestemt antall ganger
+
+![](./images/forloop.PNG)
+
+Det er vanlig å kjøre gjennom en sekvens. For eks:
+
+```{r}
+alder <- c(49, 39, 51, 73, 41)
+
+for (i in 1:5){
+  print(i)
+  print(alder[i])
+}
+```
+
+Vi kan også lage løkker med en vektor. For eks:
+
+```{r}
+for (a in alder){
+  print(a)
+}
+```
+
+## While-løkker
+
+While-løkker sjekk en betingelse for å bestemme om det skal fortsette å kjøres. ![](./images/whileloop.PNG)
+
+For eksempel:
+
+```{r}
+n <- 1
+while (n < 10){
+  print(n)
+  n <- n + runif(1)
+}
+n
+```
+
+While-løkker brukes ofte i prosesser som har et tilfeldig komponent. I eksempel over, `runif()` funksjonen trekkes et tilfeldig tall mellom 0 og 1.

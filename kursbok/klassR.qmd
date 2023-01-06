@@ -1,0 +1,18 @@
+---
+title: "Videre bruk av R"
+editor: visual
+---
+
+## klassR
+`klassR` pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan å bruke pakken ligger i en [introduksjon til klassR pakken](https://statisticsnorway.github.io/klassR/articles/klassR-vignette.html)
+
+## fellesR
+
+
+## kurs: R i produksjon
+Vi skal holde et nytt kurs med tips og anbefalinger om hvordan å bruke R i en produksjon setting. Tema for kurset inkluderer:
+- innlesning av parquet-filer på Dapla
+- pakkehåndtering med `renv`
+- opplasting til statbank
+- kjøring av R og python i jupter notebooks
+- generelle tips til organisering av kode

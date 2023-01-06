@@ -1,0 +1,10 @@
+---
+title: "Del 1"
+editor: visual
+---
+
+I del 1 av kurset skal vi snakke om:
+- [Indexering](indeksering.qmd)
+- [Datasett typer](datatype.qmd)
+- [Kontroll](kontroll.qmd)
+- [Løkker](loops.qmd)

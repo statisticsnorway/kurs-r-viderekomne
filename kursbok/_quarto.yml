@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+book:
+  title: "kurs-r-viderekomne"
+  search: true
+  cover-image: ./images/Rlogo.png
+  repo-url: https://github.com/statisticsnorway/kurs-r-viderekomne
+  open-graph: true
+  sidebar:
+    collapse-level: 2
+  page-footer:
+    center: |
+      Videre programmering i R
+  chapters:
+    - index.qmd
+    - part: dag1.qmd
+      chapters:
+      - indeksering.qmd
+      - datatype.qmd
+      - kontroll.qmd
+      - loops.qmd
+    - part: dag2.qmd
+      chapters:
+      - funksjoner.qmd
+      - videre.qmd
+
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    number-sections: false
+  pdf:
+    documentclass: scrreprt
+
+toc: true
+toc-title: "Innhold"
+collapse-level: 1
+
+comments:
+  hypothesis: true

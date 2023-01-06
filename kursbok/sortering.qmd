@@ -1,0 +1,26 @@
+---
+title: "Sortering"
+editor: visual
+---
+```{r, echo = False}
+
+```
+
+
+Det kan være en noen situasjoner hvor vi ønsker å sortere en vektor eller data. Funkjsonen **`sort()`** kan brukes til sortering av vektorer. For eks:
+
+```{r}
+alder <- c(49, 39, 51, 73, 41)
+sort(alder)
+```
+
+For sortering av datasett kan vi bruke **`arrange`**
+
+```{r}
+library(tidyverse)
+dt <- data.frame(id = 1:5, 
+                 alder)
+dt %>%
+  arrange(alder)
+```
+

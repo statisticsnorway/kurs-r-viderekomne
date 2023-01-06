@@ -1,0 +1,9 @@
+---
+title: "Del 2"
+editor: visual
+---
+
+I del 2 av kurset skal vi snakke om:
+- [Funksjoner](funksjoner.qmd)
+- [Videre](videre.qmd)
+

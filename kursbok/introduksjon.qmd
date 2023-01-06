@@ -1,0 +1,6 @@
+---
+title: "Introduksjon til R-viderekomne kurs"
+editor: visual
+---
+
+Her er en introduksjon

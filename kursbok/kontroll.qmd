@@ -1,0 +1,46 @@
+---
+title: "Kontroll"
+editor: visual
+---
+
+
+## Små kontroll prosesser
+
+For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke **`ifelse()`**. Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann. 
+
+For eksempel:
+```{r}
+alder <- c(49, 39, 51, 73, 41)
+ifelse(alder < 50, "ungere", "eldere")
+```
+Dette kan brukes for å lage nye variabler i et datasett. For eksempel
+
+```{r}
+library(tidyverse)
+dt <- data.frame(id = 1:5, alder)
+dt %>%
+  mutate(alder_kat = ifelse(alder < 50, "ungere", "eldere"))
+```
+
+## Store prosesser
+For å kontrollere store/lengere prosesser kan vi benytte **`if`** og **`else`**. Disse kan gå overe flere linjer og ta format:
+```{r}
+#| eval: false
+if (betingelsen){
+  gjør dette kode ...
+} else {
+  gjøre dette istedenfor ...
+}
+```
+
+For eksempel:
+```{r}
+if (all(dt$alder < 70)){
+  print("Alle IOer er under 70")
+} else {
+  print("Alle IOer med alder 70+ er fjernet.")
+  dt %>% 
+    filter(alder < 70)
+}
+```
+
