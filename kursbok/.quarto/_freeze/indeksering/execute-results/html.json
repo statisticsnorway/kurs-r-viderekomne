@@ -1,8 +1,10 @@
 {
-  "hash": "e8b0fb3e80724e21cd6a66ff8ce46d5e",
+  "hash": "b7a67152a74df93d8a33b7a22b292861",
   "result": {
     "markdown": "---\ntitle: \"Indeksering\"\neditor: visual\n---\n\n\n## Vektorer\n\nVektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder <- c(49, 39, 51, 73, 41)\nalder * 2\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1]  98  78 102 146  82\n```\n:::\n:::\n\n\nVi kan kjøre tester på alle elementer i en vektor. For eks:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder == 39\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] FALSE  TRUE FALSE FALSE FALSE\n```\n:::\n:::\n\n\n## Indeksering\n\nVed bruk av **`[ ]`** kan vi hente ut elementer i en vektor (eller datasett). I R (i motsetting til Python), starter indeksering fra 1! For å hente ut første element for eks:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder[1]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 49\n```\n:::\n:::\n\n\nFor å ekskludere et element kan vi bruke -indeks. For eks:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder[-1]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 39 51 73 41\n```\n:::\n:::\n\n\nFor å hente ut flere elementer kan vi spesifisere et sekvens\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder[1:4]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 49 39 51 73\n```\n:::\n:::\n\n\nVi kan også bruke indeksering til å endre et spesifikk element. For eks:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nalder[1] <- 48\nalder[1]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 48\n```\n:::\n:::\n",
-    "supporting": [],
+    "supporting": [
+      "indeksering_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
