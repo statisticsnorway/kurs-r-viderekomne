@@ -35,7 +35,7 @@ kommune_list$snitt_lonn[1]
 
 Datasett er lister som samler vektorer med samme lengde.
 
-![Eksempel datasett](/images/datasett.PNG)
+![Eksempel datasett](./images/datasett.PNG)
 
 Vi bruke `data.frame()` for å lage en vanlig R datasett
 

@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+/.quarto/
+/kursbok/.quarto/
+/kursbok/_site/
+/kursbok/_book/
+/docs/
