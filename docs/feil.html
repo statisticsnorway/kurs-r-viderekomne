@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>feil</title>
+<title>kurs-r-viderekomne - 7&nbsp; R feilsøking</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +23,165 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="feil_files/libs/clipboard/clipboard.min.js"></script>
-<script src="feil_files/libs/quarto-html/quarto.js"></script>
-<script src="feil_files/libs/quarto-html/popper.min.js"></script>
-<script src="feil_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="feil_files/libs/quarto-html/anchor.min.js"></script>
-<link href="feil_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="feil_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="feil_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="feil_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="feil_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./videre.html" rel="next">
+<link href="./funksjoner.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
 
+<meta property="og:title" content="kurs-r-viderekomne - 7&nbsp; R feilsøking">
+<meta property="og:description" content="Det kan være frusterende å programmere når det oppstår feil. Det er ikke alltid lett å forstå feilmeldinger, særlig hvis du er ny til R.">
+<meta property="og:site-name" content="kurs-r-viderekomne">
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">R feilsøking</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">kurs-r-viderekomne</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/statisticsnorway/kurs-r-viderekomne" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">R for viderekomne</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indeksering.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Indeksering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data typer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kontroll.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Kontroll</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Løkker</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./funksjoner.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Funksjoner</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feil.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">R feilsøking</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./videre.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Videre bruk av R</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Innhold</h2>
+   
+  <ul>
+  <li><a href="#tips-til-feilsøking-av-kode" id="toc-tips-til-feilsøking-av-kode" class="nav-link active" data-scroll-target="#tips-til-feilsøking-av-kode">Tips til feilsøking av kode</a>
+  <ul class="collapse">
+  <li><a href="#generelle" id="toc-generelle" class="nav-link" data-scroll-target="#generelle">Generelle</a></li>
+  <li><a href="#spesifikk" id="toc-spesifikk" class="nav-link" data-scroll-target="#spesifikk">Spesifikk</a></li>
+  </ul></li>
+  <li><a href="#tips-til-feilsøking-av-tekniske-problemer" id="toc-tips-til-feilsøking-av-tekniske-problemer" class="nav-link" data-scroll-target="#tips-til-feilsøking-av-tekniske-problemer">Tips til feilsøking av tekniske problemer</a>
+  <ul class="collapse">
+  <li><a href="#generelle-1" id="toc-generelle-1" class="nav-link" data-scroll-target="#generelle-1">Generelle</a></li>
+  <li><a href="#spesifikk-1" id="toc-spesifikk-1" class="nav-link" data-scroll-target="#spesifikk-1">Spesifikk</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-title">R feilsøking</span></h1>
+</div>
 
 
-<section id="r-feilsøking" class="level1">
-<h1>R feilsøking</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Det kan være frusterende å programmere når det oppstår feil. Det er ikke alltid lett å forstå feilmeldinger, særlig hvis du er ny til R.</p>
 <p>Feil kan klassifiseres som “kode” eller “tekniske”. Kode-feil oppstår når vi programmere ting litt feil, for eksempel bruke funksjoner på en feil måte. Disse type feil kan vi mest ofte finne hjelp på nett og rette opp selv. Tekniske feil kan oppstår hvis vi mangler andre applikasjoner eller pakker, når vi prøve å kjøre R på forskjellige platform/ sammen med andre verktøy osv. I noen tilfelle kan vi løse disse selv men andre ganger trenger vi støtte fra IT.</p>
 <section id="tips-til-feilsøking-av-kode" class="level2">
@@ -169,12 +304,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
+
+
 </section>
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -308,7 +443,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./funksjoner.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Funksjoner</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./videre.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">Videre bruk av R</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Videre programmering i R</div>
+  </div>
+</footer>
 
 
 
