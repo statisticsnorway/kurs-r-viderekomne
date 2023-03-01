@@ -85,5 +85,8 @@
   },
   "./kursbok/videre.qmd": {
     "videre.html": "df5bf175"
+  },
+  "feil.qmd": {
+    "feil.html": "15d15ea7"
   }
 }

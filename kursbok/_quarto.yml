@@ -18,16 +18,13 @@ book:
       Videre programmering i R
   chapters:
     - index.qmd
-    - part: dag1.qmd
-      chapters:
-      - indeksering.qmd
-      - datatype.qmd
-      - kontroll.qmd
-      - loops.qmd
-    - part: dag2.qmd
-      chapters:
-      - funksjoner.qmd
-      - videre.qmd
+    - indeksering.qmd
+    - datatype.qmd
+    - kontroll.qmd
+    - loops.qmd
+    - funksjoner.qmd
+    - feil.qmd
+    - videre.qmd
 
 format:
   html:

@@ -1,0 +1,63 @@
+# R feilsøking
+Det kan være frusterende å programmere når det oppstår feil. Det er ikke alltid lett å forstå feilmeldinger, særlig hvis du er ny til R. 
+
+Feil kan klassifiseres som "kode" eller "tekniske". Kode-feil oppstår når vi programmere ting litt feil, for eksempel bruke funksjoner på en feil måte. Disse type feil kan vi mest ofte finne hjelp på nett og rette opp selv. Tekniske feil kan oppstår hvis vi mangler andre applikasjoner eller pakker, når vi prøve å kjøre R på forskjellige platform/ sammen med andre verktøy osv. I noen tilfelle kan vi løse disse selv men andre ganger trenger vi støtte fra IT.  
+
+## Tips til feilsøking av kode
+### Generelle
+- Kjør kode linje-ved-linje for å isolere feilen.
+- Kopiere feilmelding du får inn til google (rense bort variabel/datasett navn osv først).
+- For skriving av egen-funksjoner det kan hjelpe å sette inn noen print-setninger for å se hvor det stopper opp. Eller bruk debug().
+- Sjekk at data er formatten som forventet (tibble vs. data.frame)
+- Prøv å spørre Chatgpt
+- Skriv om hjelp på [yammer](https://web.yammer.com/main/org/ssb.no/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI5NDgxOTUyIn0/all).  
+
+### Spesifikk
+
+| Vanlige feilmeldinger | Tips | 
+|----|----|
+| "argument is of length zero"      | Se [statology](https://www.statology.org/r-argument-is-of-length-zero/)  | 
+| "could not find function"     | Sjekk at du har stavet riktig (små og store bokstaver). Sjekk at pakken er installerte og kalt inn.   | 
+| "subscript out of bounds"       | Sjekk at indeks ikke er for stor (utenfor vektor/datasett)   |
+|"no applicable method" |Sjekk at data er i format som forventet (eg data.frame, tibble, data.table osv)|
+|"cannot open file" |Sjekk at du har stavet filnavn riktig. Og sjekk filsti. Hvor er du? Bruk `getwd()`. Navigere til foreldre mappen ved .. i sti. Bruk Sys.getenv("ARBTAKER") for å hente inn miljøvariabler. DU kan også skriv ut alle filene ved `list.files()`|
+: {tbl-colwidths="[35,65]"}
+
+
+## Tips til feilsøking av tekniske problemer 
+### Generelle
+- Kopiere feilmelding inn til google.
+- Send en melding til kundeservice. Prøv å beskrive problemet. Lim inn feilmelding og kode du har kjørt.
+- Hvis det er på Dapla - skriv på Slack: 'hjelp_dapla'. Gjerne prøve å lage et lite eksempel av når problemet oppstår som kalles et [Minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+
+
+### Spesifikk
+
++------------------+--------------------------------------------------------------------------------+
+| Feilmeldinger    | Tips                                                                           | 
++==================+================================================================================+
+|shiny             | - Bruker du jupyter?                                                           |
+|                  |    + Bruk wrapper funksjon i                                                   |
+|                  |    +[fellesr](https://github.com/statisticsnorway/fellesr/blob/main/R/shiny.R) |
++------------------+--------------------------------------------------------------------------------+
+|pakke installering| - Bruk renv :-)                                                                |
+|                  |   + første gang: kjør `renv::init()`                                           |
+|                  |   + bruk `renv::install('<pakker>')` for å installere                          |
+|                  |   + Ikke står på hjemmeområde men i en prosjektmappe.                          |
+|                  |   + Hvis "no package available", sjekk i renv.lock at URL er riktig            |
+|                  |     + URL skal ha "nexus.ssb.no" i navn                                        |
+|                  |   + For multi-mappe prosjekter - har en renv i hovedmappen                     |
+|                  |     + bruk `renv::autoload()` i notebookene                                    |
++------------------+--------------------------------------------------------------------------------+
+|Git               | - Mangler git fane i RStudio?                                                  |
+|                  |    + Hvis du har en lokal RStudio på PC sjekk ut                               |
+|                  |  [happygitwithr](https://happygitwithr.com/rstudio-git-github.html)            |
+|                  | - Får ikke commit?                                                             |
+|                  |    + Husk å skrive inn en melding før du trykker på commit knappen.            |
+|                  | - Pull/push knapp er grå?                                                      |
+|                  |    + Har du noen endringer/commits til å pushe?                                |
+|                  |    + Bytte til kommandoer for å sjekke status med `git status`                 |
+|                  |    + Evt. bruk kommandoer istedenfor knapper                                   |
++------------------+--------------------------------------------------------------------------------+
+
+

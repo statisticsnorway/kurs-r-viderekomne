@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "index.html#del-1",
-    "href": "index.html#del-1",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "R for viderekomne",
-    "section": "Del 1",
-    "text": "Del 1\n\nIndexering av vektorer\nForklaring av forkjellige datasett typer\nKontroll setninger med if og else\nFor- og while-løkker"
-  },
-  {
-    "objectID": "index.html#del-2",
-    "href": "index.html#del-2",
-    "title": "R for viderekomne",
-    "section": "Del 2",
-    "text": "Del 2\n\nHvordan å skrive funksjoner\nAndre ting og vei videre"
-  },
-  {
-    "objectID": "dag1.html",
-    "href": "dag1.html",
-    "title": "Del 1",
     "section": "",
-    "text": "I del 1 av kurset skal vi snakke om:\n\nIndexering\nDatasett typer\nKontroll\nLøkker"
+    "text": "Velkommen til kurset! Dette er et kurs for de som har litt R programmering fra før.\n\nIndexering av vektorer\nForklaring av forkjellige datasett typer\nKontroll setninger med if og else\nFor- og while-løkker\nHvordan å skrive funksjoner\nTips til feilsøking\nAndre ting og vei videre"
   },
   {
     "objectID": "indeksering.html#vektorer",
@@ -84,13 +70,6 @@
     "text": "While-løkker\nWhile-løkker sjekk en betingelse for å bestemme om det skal fortsette å kjøres. \nFor eksempel:\n\nn <- 1\nwhile (n < 10){\n  print(n)\n  n <- n + runif(1)\n}\n\n[1] 1\n[1] 1.953448\n[1] 2.492953\n[1] 2.749929\n[1] 3.347577\n[1] 3.643565\n[1] 4.61297\n[1] 4.802791\n[1] 5.263961\n[1] 5.944419\n[1] 6.625204\n[1] 7.276737\n[1] 7.479716\n[1] 7.810564\n[1] 7.846378\n[1] 8.14923\n[1] 8.98811\n[1] 9.067008\n[1] 9.206926\n[1] 9.269854\n[1] 9.744641\n[1] 9.777912\n[1] 9.878996\n\nn\n\n[1] 10.72613\n\n\nWhile-løkker brukes ofte i prosesser som har et tilfeldig komponent. I eksempel over, runif() funksjonen trekkes et tilfeldig tall mellom 0 og 1."
   },
   {
-    "objectID": "dag2.html",
-    "href": "dag2.html",
-    "title": "Del 2",
-    "section": "",
-    "text": "I del 2 av kurset skal vi snakke om: - Funksjoner - Videre"
-  },
-  {
     "objectID": "funksjoner.html#hva-er-en-funksjon",
     "href": "funksjoner.html#hva-er-en-funksjon",
     "title": "Funksjoner",
@@ -138,6 +117,20 @@
     "title": "Funksjoner",
     "section": "Varsling i funksjoner",
     "text": "Varsling i funksjoner\nNoen ganger øsnker vi at funksjonen si ifra om noen er litt rart eller feil. For at funksjonen skal stoppe bruk stop(). For at det skal gi et varsel bruk warning().\nFor eksempel, her stoppe funksjon om kommunenr er kun 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.\n\nlage_fylke <- function(kommunenr){\n  if (nchar(kommunenr) <= 2){\n    stop(\"Kommune nummer var ikke gjeldig.\")\n  }\n  if (nchar(kommunenr) == 3){\n    warning(\"Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\\n\")\n    kommunenr <- paste(\"0\", kommunenr, sep = \"\")\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\n\nlage_fylke(kommunenr = \"03\")\n\n\n\nlage_fylke(kommunenr = \"301\")\n\nWarning in lage_fylke(kommunenr = \"301\"): Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\n\n\n[1] \"03\"\n\n\n\nlage_fylke(kommunenr = \"0301\")\n\n[1] \"03\""
+  },
+  {
+    "objectID": "feil.html#tips-til-feilsøking-av-kode",
+    "href": "feil.html#tips-til-feilsøking-av-kode",
+    "title": "R feilsøking",
+    "section": "Tips til feilsøking av kode",
+    "text": "Tips til feilsøking av kode\n\nGenerelle\n\nKjør kode linje-ved-linje for å isolere feilen.\nKopiere feilmelding du får inn til google (rense bort variabel/datasett navn osv først).\nFor skriving av egen-funksjoner det kan hjelpe å sette inn noen print-setninger for å se hvor det stopper opp. Eller bruk debug().\nSjekk at data er formatten som forventet (tibble vs. data.frame)\nPrøv å spørre Chatgpt\nSkriv om hjelp på yammer.\n\n\n\nSpesifikk\n\n\n\n\n\n\n\nVanlige feilmeldinger\nTips\n\n\n\n\n“argument is of length zero”\nSe statology\n\n\n“could not find function”\nSjekk at du har stavet riktig (små og store bokstaver). Sjekk at pakken er installerte og kalt inn.\n\n\n“subscript out of bounds”\nSjekk at indeks ikke er for stor (utenfor vektor/datasett)\n\n\n“no applicable method”\nSjekk at data er i format som forventet (eg data.frame, tibble, data.table osv)\n\n\n“cannot open file”\nSjekk at du har stavet filnavn riktig. Og sjekk filsti. Hvor er du? Bruk getwd(). Navigere til foreldre mappen ved .. i sti. Bruk Sys.getenv(“ARBTAKER”) for å hente inn miljøvariabler. DU kan også skriv ut alle filene ved list.files()"
+  },
+  {
+    "objectID": "feil.html#tips-til-feilsøking-av-tekniske-problemer",
+    "href": "feil.html#tips-til-feilsøking-av-tekniske-problemer",
+    "title": "R feilsøking",
+    "section": "Tips til feilsøking av tekniske problemer",
+    "text": "Tips til feilsøking av tekniske problemer\n\nGenerelle\n\nKopiere feilmelding inn til google.\nSend en melding til kundeservice. Prøv å beskrive problemet. Lim inn feilmelding og kode du har kjørt.\nHvis det er på Dapla - skriv på Slack: ‘hjelp_dapla’. Gjerne prøve å lage et lite eksempel av når problemet oppstår som kalles et Minimal reproducible example\n\n\n\nSpesifikk\n\n\n\nFeilmeldinger\nTips\n\n\n\n\nshiny\n\nBruker du jupyter?\n\nBruk wrapper funksjon i +fellesr\n\n\n\n\npakke installering\n\nBruk renv :-)\n\nførste gang: kjør renv::init()\nbruk renv::install('<pakker>') for å installere\nIkke står på hjemmeområde men i en prosjektmappe.\nHvis “no package available”, sjekk i renv.lock at URL er riktig\n\nURL skal ha “nexus.ssb.no” i navn\n\nFor multi-mappe prosjekter - har en renv i hovedmappen\n\nbruk renv::autoload() i notebookene\n\n\n\n\n\nGit\n\nMangler git fane i RStudio?\n\nHvis du har en lokal RStudio på PC sjekk ut happygitwithr\n\nFår ikke commit?\n\nHusk å skrive inn en melding før du trykker på commit knappen.\n\nPull/push knapp er grå?\n\nHar du noen endringer/commits til å pushe?\nBytte til kommandoer for å sjekke status med git status\nEvt. bruk kommandoer istedenfor knapper"
   },
   {
     "objectID": "videre.html#klassr",
