@@ -3,6 +3,8 @@ title: "Indeksering"
 editor: visual
 ---
 
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=99009028-f44a-4972-b267-b376f4e8a06b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Indeks.mp4"></iframe>
+
 ## Vektorer
 
 Vektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:
