@@ -3,23 +3,25 @@ title: "Funksjoner"
 editor: visual
 ---
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=e4b467c4-5c38-47d8-9561-4398d46ab367&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="funksjoner.mp4"></iframe>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=e4b467c4-5c38-47d8-9561-4398d46ab367&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="funksjoner.mp4">
+
+</iframe>
 
 ## Hva er en funksjon?
 
-En funksjon er en del av kode som kan brukes om-og-om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).
+En funksjon er en kodedel som kan brukes om og om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).
 
 ![](./images/funksjon1.PNG)
 
-Parameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere mer.
+En parameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere videre hva funksjonen skal gjøres.
 
 ![](./images/funksjon2.PNG)
 
-Bruk av funksjoner kan være nyttig: - Gjenbruk - Abstraksjon (trenger ikke å vite hvordan)
+Bruk av funksjoner kan være nyttig for gjenbruk og abstraksjon.
 
 ## Lage en enkel funksjon
 
-Vi lager en funksjon ved å allokere det et navn og spesifisere `function()`. For eks
+Vi lager en funksjon ved å allokere et navn og spesifisere `function()`:
 
 ```{r}
 min_func <- function(){
@@ -27,7 +29,7 @@ min_func <- function(){
 }
 ```
 
-Og etterpå kjøre vi funksjonen ved
+Etterpå kan vi kjøre funksjonen med:
 
 ```{r}
 min_func()
@@ -35,7 +37,7 @@ min_func()
 
 ## Lage en funksjon for fylke
 
-Her skal vi lage en funksjon som ta kommunenummer som input og returnere fylkenummer. Vi spesifisere kommunenummer som en parameter i funksjonen. Vi bruker `substr()` for å plukke ut de første to siffer.
+Her skal vi lage en funksjon som kan ta kommunenummer som input og returnere fylkenummer. Vi spesifiserer kommunenummer som en parameter i funksjonen. Vi bruker `substr()` for å plukke ut de første to sifferne.
 
 ```{r}
 lage_fylke <- function(kommunenr){
@@ -45,11 +47,11 @@ lage_fylke <- function(kommunenr){
 lage_fylke("0301")
 ```
 
-Funksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Det kan også spesifiseres med `return()` ved behov, særlig i kompleks funksjoner med multiple output.
+Funksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Hva som returneres kan også spesifiseres med `return()` ved behov, særlig nyttig i komplekse funksjoner med flere output.
 
 ## Flere parameter
 
-Funksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen vi kanskje ønsker å sjekke lengde for å se om ledende 0-er har falt av.
+Funksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen kanskje vi ønsker å sjekke lengden for å se om ledende 0-ere har falt av.
 
 ```{r}
 lage_fylke <- function(kommunenr, sjekk_lengde){
@@ -71,7 +73,7 @@ lage_fylke(kommunenr = "301", sjekk_lengde = FALSE)
 
 ## Standard/default parameter
 
-Vi kan sett et parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan har `sjekk_lengde=TRUE` som standard.
+Vi kan sette standard parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan ha `sjekk_lengde=TRUE` som standard parameter.
 
 ```{r}
 lage_fylke <- function(kommunenr, sjekk_lengde = TRUE){
@@ -88,11 +90,11 @@ lage_fylke("301")
 
 ```
 
-Noen ganger kalles disse for "named parameters" eller "keyword arguements". Standard parameter alltid kommer til sist
+Noen ganger kalles disse for "named parameters" eller "keyword arguements". Standard parameter kommer alltid til sist.
 
-## Global vs Lokal-miljø
+## Globalt vs, Lokalt-miljø
 
-Når vi lage en funksjon, lage vi en liten lokal-miljø. Varaiabler som lagres inn i en funksjon påvirke ikke global-miljø og er slettet når funksjonen er ferdig-kjørt. For eksempel om vi har en enkel function som returneres verdien av parameter `x` vil ikke dette påvirke om vi har en x i det global-miljøet:
+Når vi lager en funksjon, lager vi et lite lokalt-miljø. Varaiabler som lagres inn i en funksjon påvirker ikke det globale miljøet og blir slettet når funksjonen er ferdigkjørt. For eksempel, om vi har en enkel funksjon som returnerer verdien av parameter `x` vil ikke dette påvirkes om vi har en x i det globale miljøet:
 
 ```{r}
 funcx <- function(x){
@@ -108,9 +110,9 @@ x
 
 ## Varsling i funksjoner
 
-Noen ganger øsnker vi at funksjonen si ifra om noen er litt rart eller feil. For at funksjonen skal stoppe bruk **`stop()`**. For at det skal gi et varsel bruk **`warning()`**.
+Noen ganger ønsker vi at funksjonen skal si ifra om noe er litt rart eller feil. For at funksjonen skal stoppe bruker vi **`stop()`**. For at det skal gi et varsel bruker vi **`warning()`**.
 
-For eksempel, her stoppe funksjon om kommunenr er kun 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.
+For eksempel, her stopper funksjon om kommunenr kun er 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.
 
 ```{r}
 lage_fylke <- function(kommunenr){

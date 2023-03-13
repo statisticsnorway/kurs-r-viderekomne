@@ -4,25 +4,27 @@ editor: visual
 ---
 
 ## klassR
-`klassR` pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan å bruke pakken ligger i en [introduksjon til klassR pakken](https://statisticsnorway.github.io/klassR/articles/klassR-vignette.html)
 
- 
+`klassR` pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan du kan bruke pakken ligger i en [introduksjon til klassR pakken](https://statisticsnorway.github.io/klassR/articles/klassR-vignette.html)
+
 ## Metodebibliotek
-Seksjon for Metoder har samlet nyttige metodiske funksjoner for bruk i et statistikk produksjonsløp. Både interne og eksterne utviklet funksjoner er inkluderte og har blitt testet. Metodebiblioteket er under utvikling men er [tilgjengelig for alle på GitHub](https://statisticsnorway.github.io/metodebibliotek/). 
+
+Seksjon for Metoder har samlet nyttige metodiske funksjoner for bruk i et statistikk produksjonsløp. Både interne og eksterne utviklet funksjoner er inkluderte og har blitt testet. Metodebiblioteket er under utvikling men er [tilgjengelig for alle på GitHub](https://statisticsnorway.github.io/metodebibliotek/).
 
 ## fellesR
-R-pakken [`fellesR`](https://github.com/statisticsnorway/fellesr) er en samling av funksjoner som kan være nyttige for flere på SSB. Alle er velkommen til å bidra med egne funksjoner om de synes andre kan har nytte av det. Flere av de funksjoner skal vi går gjennom i et nytt kurs 'R i produksjon'.
+
+R-pakken [`fellesR`](https://github.com/statisticsnorway/fellesr) er en samling av funksjoner som kan være nyttige for flere på SSB. Alle er velkomne til å bidra med egne funksjoner om de synes andre kan ha nytte av de. Flere av de funksjoner skal vi gå gjennom i et nytt kurs 'R i produksjon'.
 
 ## kurs: R i produksjon
+
 Vi skal holde et nytt kurs med tips og anbefalinger om hvordan å bruke R i en produksjon setting. Tema for kurset inkluderer:
 
-- innlesning av parquet-filer på Dapla
+-   innlesning av parquet-filer på Dapla
 
-- pakkehåndtering med `renv`
+-   pakkehåndtering med `renv`
 
-- opplasting til Statbank
+-   opplasting til Statbank
 
-- kjøring av R og python i jupter notebooks
+-   kjøring av R og python i jupter notebooks
 
-- generelle tips til organisering av kode
-
+-   generelle tips til organisering av kode
