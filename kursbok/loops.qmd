@@ -3,15 +3,17 @@ title: "Løkker"
 editor: visual
 ---
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cd649512-2899-4231-aeb5-a2f1f709c8eb&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="loops.mp4"></iframe>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cd649512-2899-4231-aeb5-a2f1f709c8eb&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="loops.mp4">
+
+</iframe>
 
 For å gjøre den samme prosessen flere ganger kan vi lage løkker. Løkker har noen fordeler:
 
 -   Vi slipper å skrive den samme koden flere ganger.
 
--   Enklere å endre noe verdier/variabler i koden (kun ett sted).
+-   Enklere å endre noen verdier/variabler i koden (kun ett sted).
 
--   Hvis vi finner en feil, da trenger vi kun å rette det ett sted.
+-   Hvis vi finner en feil trenger vi kun å rette den ett sted.
 
 ## For-løkker
 
@@ -30,7 +32,7 @@ for (i in 1:5){
 }
 ```
 
-Vi kan også lage løkker med en vektor. For eks:
+Vi kan også lage løkker med en vektor:
 
 ```{r}
 for (a in alder){
@@ -40,7 +42,7 @@ for (a in alder){
 
 ## While-løkker
 
-While-løkker sjekk en betingelse for å bestemme om det skal fortsette å kjøres. ![](./images/whileloop.PNG)
+While-løkker sjekk en betingelse for å bestemme om den skal fortsette å kjøre. ![](./images/whileloop.PNG)
 
 For eksempel:
 
@@ -53,4 +55,4 @@ while (n < 10){
 n
 ```
 
-While-løkker brukes ofte i prosesser som har et tilfeldig komponent. I eksempel over, `runif()` funksjonen trekkes et tilfeldig tall mellom 0 og 1.
+While-løkker brukes ofte i prosesser som har en tilfeldig komponent. I eksempelet over trekker `runif()` funksjonen et tilfeldig tall mellom 0 og 1.

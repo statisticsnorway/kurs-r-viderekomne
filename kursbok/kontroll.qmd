@@ -3,36 +3,36 @@ title: "Kontroll"
 editor: visual
 ---
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=1b3a00bb-befe-415a-a660-c630247e1325&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="if.mp4"></iframe>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=1b3a00bb-befe-415a-a660-c630247e1325&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="if.mp4">
 
-## Små kontroll prosesser
+</iframe>
 
-For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke **`ifelse()`**. Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann.
+## Små kontrollprosesser
 
-For eksempel:
+For å sammenligne og gjøre noe basert på en betingelse kan vi bruke **`ifelse()`**. Vi må spesifisere betingelsen først, og så hva som skal returneres dersom betingelsen er sann, og så hva som skal returneres om betingelsen er usann.
 
 ```{r}
 alder <- c(49, 39, 51, 73, 41)
-ifelse(alder < 50, "ungere", "eldere")
+ifelse(alder < 50, "yngre", "eldre")
 ```
 
-Dette kan brukes for å lage nye variabler i et datasett. For eksempel
+Dette kan brukes for å lage nye variabler i et datasett:
 
 ```{r}
 library(tidyverse)
 dt <- data.frame(id = 1:5, alder)
 dt %>%
-  mutate(alder_kat = ifelse(alder < 50, "ungere", "eldere"))
+  mutate(alder_kat = ifelse(alder < 50, "yngre", "eldre"))
 ```
 
 ## Store prosesser
 
-For å kontrollere store/lengere prosesser kan vi benytte **`if`** og **`else`**. Disse kan gå overe flere linjer og ta format:
+For å kontrollere store/lengre prosesser kan vi benytte **`if`** og **`else`**. Disse kan gå over flere linjer og ta formatet:
 
 ```{r}
 #| eval: false
 if (betingelsen){
-  gjør dette kode ...
+  gjør dette ...
 } else {
   gjøre dette istedenfor ...
 }

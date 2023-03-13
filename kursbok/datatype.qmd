@@ -1,17 +1,19 @@
 ---
-title: "Data typer"
+title: "Datatyper"
 editor: visual
 ---
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cf86d97a-9dbd-4133-8634-dcba28d09bb7&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="datatype.mp4"></iframe>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cf86d97a-9dbd-4133-8634-dcba28d09bb7&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="datatype.mp4">
+
+</iframe>
 
 ## Lister
 
-Lister samler objekter/vektorer/datasett. De kan har forskjellige type og størrelser.
+Lister samler objekter, vektorer eller datasett. I motsetning til vektorer kan de inneholde forskjellige datatyper og forskjellig lengder.
 
 ![](./images/liste.PNG)
 
-Vi lager lister ved å bruke `list()`.
+Vi lager lister ved å bruke `list()`:
 
 ```{r}
 kommune_list <- list(sted = c("Oslo", "Kongsvinger", "Halden"), 
@@ -21,13 +23,13 @@ kommune_list <- list(sted = c("Oslo", "Kongsvinger", "Halden"),
 kommune_list
 ```
 
-Vi kan bruke **\$** for å få tilgang til et vektor eller element i en liste.
+Vi kan bruke **\$** for å få tilgang til en vektor eller et element i en liste:
 
 ```{r}
 kommune_list$snitt_lonn
 ```
 
-Vi kan kombinere dette med `[ ]` for å hente ut elementer.
+Vi kan kombinere dette med `[ ]` for å hente ut elementer:
 
 ```{r}
 kommune_list$snitt_lonn[1]
@@ -39,22 +41,22 @@ Datasett er lister som samler vektorer med samme lengde.
 
 ![Eksempel datasett](./images/datasett.PNG)
 
-Vi bruke `data.frame()` for å lage en vanlig R datasett
+Vi bruker `data.frame()` for å lage et vanlig R datasett:
 
 ```{r}
 kommune_data <- data.frame(sted = c("Oslo", "Kongsvinger", "Halden"), 
                           antall_lonnstakere = c(467400, 8300, 12600))
 ```
 
-Igjen, vi kan bruke **\$** for å få tilgang til et vektor og `[ ]` for å hente ut elementer.
+Igjen kan vi bruke **\$** for å få tilgang til en vektor og `[ ]` for å hente ut elementer:
 
 ```{r}
 kommune_data$snitt_lonn[2]
 ```
 
-NB: I *tidyverse* bruker vi variabelnavn istedenfor `$`.Dette har konsekvenser for kjøretid og noen begrensninger men *tidyverse* er veldig intuitiv og givende pakke for analysering av data.
+NB: I *tidyverse* bruker vi variabelnavn istedenfor `$`.Dette har konsekvenser for kjøretid og noen begrensninger, likevel er *tidyverse* en veldig intuitiv og givende pakke for analysering av data.
 
-Noen nyttige funksjoner som kan benyttes ved datasett
+Noen nyttige funksjoner som kan benyttes ved datasett:
 
 ```{r}
 nrow(kommune_data)
@@ -70,7 +72,7 @@ library(tidyverse)
 glimpse(kommune_data)
 ```
 
-## Forskjellige datasett typer
+## Forskjellige datasetttyper
 
 Det er forskjlellige måte å formatere data i R. Disse er mest vanlig:
 

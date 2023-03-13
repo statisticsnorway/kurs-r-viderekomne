@@ -5,10 +5,10 @@ title: "R for viderekomne"
 Velkommen til kurset! Dette er et kurs for de som har litt R programmering fra før.
 
 
-- [Indexering av vektorer](indeksering.qmd)
-- [Forklaring av forkjellige datasett typer](datatype.qmd)
+- [Indeksering av vektorer](indeksering.qmd)
+- [Forklaring av forskjellige datasetttyper](datatype.qmd)
 - [Kontroll setninger med if og else](kontroll.qmd)
-- [For- og while-løkker](loops.qmd)
-- [Hvordan å skrive funksjoner](funksjoner.qmd)
+- [For- og whileløkker](loops.qmd)
+- [Hvordan skrive funksjoner](funksjoner.qmd)
 - [Tips til feilsøking](feil.qmd)
-- [Andre ting og vei videre](videre.qmd)
+- [Andre ting og veien videre](videre.qmd)
