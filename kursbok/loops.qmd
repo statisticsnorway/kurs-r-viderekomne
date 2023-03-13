@@ -3,6 +3,8 @@ title: "Løkker"
 editor: visual
 ---
 
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cd649512-2899-4231-aeb5-a2f1f709c8eb&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="loops.mp4"></iframe>
+
 For å gjøre den samme prosessen flere ganger kan vi lage løkker. Løkker har noen fordeler:
 
 -   Vi slipper å skrive den samme koden flere ganger.
