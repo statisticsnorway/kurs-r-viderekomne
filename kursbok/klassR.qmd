@@ -4,15 +4,13 @@ editor: visual
 ---
 
 ## klassR
+
 `klassR` pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan å bruke pakken ligger i en [introduksjon til klassR pakken](https://statisticsnorway.github.io/klassR/articles/klassR-vignette.html)
+
+\<iframe src="https://ssbno.sharepoint.com/sites/S811/\_layouts/15/embed.aspx?UniqueId=f20a3652-18e4-4396-86f8-3f929d656d4b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="klassR.mp4"\>\</iframe\>
 
 ## fellesR
 
-
 ## kurs: R i produksjon
-Vi skal holde et nytt kurs med tips og anbefalinger om hvordan å bruke R i en produksjon setting. Tema for kurset inkluderer:
-- innlesning av parquet-filer på Dapla
-- pakkehåndtering med `renv`
-- opplasting til statbank
-- kjøring av R og python i jupter notebooks
-- generelle tips til organisering av kode
+
+Vi skal holde et nytt kurs med tips og anbefalinger om hvordan å bruke R i en produksjon setting. Tema for kurset inkluderer: - innlesning av parquet-filer på Dapla - pakkehåndtering med `renv` - opplasting til statbank - kjøring av R og python i jupter notebooks - generelle tips til organisering av kode
