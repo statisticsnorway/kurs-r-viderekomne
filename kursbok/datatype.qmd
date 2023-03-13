@@ -3,7 +3,7 @@ title: "Data typer"
 editor: visual
 ---
 
-\<iframe src="https://ssbno.sharepoint.com/sites/S811/\_layouts/15/embed.aspx?UniqueId=cf86d97a-9dbd-4133-8634-dcba28d09bb7&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="datatype.mp4"\>\</iframe\>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=cf86d97a-9dbd-4133-8634-dcba28d09bb7&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="datatype.mp4"></iframe>
 
 ## Lister
 
