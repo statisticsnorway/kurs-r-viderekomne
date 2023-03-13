@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: ../docs
+  
 
 execute:
   freeze: auto
@@ -10,6 +11,7 @@ book:
   search: true
   cover-image: ./images/Rlogo.png
   repo-url: https://github.com/statisticsnorway/kurs-r-viderekomne
+  downloads: pdf
   open-graph: true
   sidebar:
     collapse-level: 2
