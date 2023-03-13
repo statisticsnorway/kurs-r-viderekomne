@@ -3,6 +3,8 @@ title: "Funksjoner"
 editor: visual
 ---
 
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=e4b467c4-5c38-47d8-9561-4398d46ab367&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="funksjoner.mp4"></iframe>
+
 ## Hva er en funksjon?
 
 En funksjon er en del av kode som kan brukes om-og-om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).

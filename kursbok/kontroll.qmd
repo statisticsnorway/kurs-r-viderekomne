@@ -3,16 +3,19 @@ title: "Kontroll"
 editor: visual
 ---
 
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=1b3a00bb-befe-415a-a660-c630247e1325&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="if.mp4"></iframe>
 
 ## Små kontroll prosesser
 
-For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke **`ifelse()`**. Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann. 
+For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke **`ifelse()`**. Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann.
 
 For eksempel:
+
 ```{r}
 alder <- c(49, 39, 51, 73, 41)
 ifelse(alder < 50, "ungere", "eldere")
 ```
+
 Dette kan brukes for å lage nye variabler i et datasett. For eksempel
 
 ```{r}
@@ -23,7 +26,9 @@ dt %>%
 ```
 
 ## Store prosesser
+
 For å kontrollere store/lengere prosesser kan vi benytte **`if`** og **`else`**. Disse kan gå overe flere linjer og ta format:
+
 ```{r}
 #| eval: false
 if (betingelsen){
@@ -34,6 +39,7 @@ if (betingelsen){
 ```
 
 For eksempel:
+
 ```{r}
 if (all(dt$alder < 70)){
   print("Alle IOer er under 70")
@@ -43,4 +49,3 @@ if (all(dt$alder < 70)){
     filter(alder < 70)
 }
 ```
-
