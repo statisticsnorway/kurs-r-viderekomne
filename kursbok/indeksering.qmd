@@ -3,18 +3,18 @@ title: "Indeksering"
 editor: visual
 ---
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=99009028-f44a-4972-b267-b376f4e8a06b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Indeks.mp4"></iframe>
-
 ## Vektorer
 
-Vektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:
+Vektorer samler flere verdier til et objekt. De må være samme type (numeriske, logiske, karakterer).
+
+Vi kan beregne direkte på alle elementer i en vektor:
 
 ```{r}
 alder <- c(49, 39, 51, 73, 41)
 alder * 2
 ```
 
-Vi kan kjøre tester på alle elementer i en vektor. For eks:
+Vi kan kjøre tester på alle elementer i en vektor:
 
 ```{r}
 alder == 39
@@ -22,25 +22,27 @@ alder == 39
 
 ## Indeksering
 
-Ved bruk av **`[ ]`** kan vi hente ut elementer i en vektor (eller datasett). I R (i motsetting til Python), starter indeksering fra 1! For å hente ut første element for eks:
+Ved bruk av **`[ ]`** kan vi hente ut elementene i en vektor (eller et datasett). NB! I R (i motsetting til Python) starter indeksering fra 1.
+
+For å hente ut første element:
 
 ```{r}
 alder[1]
 ```
 
-For å ekskludere et element kan vi bruke -indeks. For eks:
+For å ekskludere et element kan vi bruke -indeks:
 
 ```{r}
 alder[-1]
 ```
 
-For å hente ut flere elementer kan vi spesifisere et sekvens
+For å hente ut flere elementer kan vi spesifisere en sekvens:
 
 ```{r}
 alder[1:4]
 ```
 
-Vi kan også bruke indeksering til å endre et spesifikk element. For eks:
+Vi kan også bruke indeksering til å endre et spesifikt element:
 
 ```{r}
 alder[1] <- 48
