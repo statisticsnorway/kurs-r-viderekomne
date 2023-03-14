@@ -1,0 +1,27 @@
+R er et godt verktøy for datavisualisering, og det finnes mange pakker som kan bidra til god dataformidling i R. R-pakker er en samling med spesifikke funksjoner laget for et bestemt formål. 
+## ggplot
+Et av de mest brukte datavisualiseringspakkene i R er 'ggplot2' som finnes i tidyverse universet av pakker. Det finnes utrolig mye man kan gjøre med ggplot, men man starter stort sett med et datasett. 
+
+```{r}
+kommune_list <- data.frame(sted = c("Oslo", "Kongsvinger", "Halden"), 
+                     snitt_lonn = c(636, 504, 552), 
+                     antall_lonnstakere = c(467400, 8300, 12600),
+                     nivaa = "Kommune")
+```
+Vi starter alltid med funksjonen ggplot() og så spesifiserer vi dataen vi har lyst til å plotte. Her er det dataen i kommune_list, hvor vi sier at sted skal plottes på x-aksen og antall_lonnstakere på y-aksen (vi kan spesifisere x = "" dersom vi for eksempel vil bytte rekkefølge). Deretter spesifiserer vi at det er et kolonne diagram vi vil lage, med geom_col(). 
+```{r}
+library(ggplot2)
+ggplot(kommune_list, aes(sted, antall_lonnstakere)) + 
+    geom_col()
+```
+Vi kan lage plotte med mer en to dimensjoner ved å for eksempel også spesifisere farger, størrelse osv. 
+```{r}
+ggplot(kommune_list, aes(sted, snitt_lonn, size = antall_lonnstakere)) + 
+  geom_point()
+```
+Det er mye funskjonalitet som ligger i ggplot hvor man kan spesifisere tittelnavn, aksenavn, legende, farger o.l. 
+For å finne de forskjellige ggplot funksjonene for visualisering kan man sjekke ut [cheatsheet for diverse R pakker](https://posit.co/resources/cheatsheets/?type=posit-cheatsheets&_page=2/). 
+
+## plotly
+
+
