@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <meta property="og:title" content="kurs-r-viderekomne - 6&nbsp; Funksjoner">
-<meta property="og:description" content="En funksjon er en del av kode som kan brukes om-og-om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).">
+<meta property="og:description" content="En funksjon er en kodedel som kan brukes om og om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).">
 <meta property="og:site-name" content="kurs-r-viderekomne">
 </head>
 
@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data typer</span></a>
+  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datatyper</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#lage-en-funksjon-for-fylke" id="toc-lage-en-funksjon-for-fylke" class="nav-link" data-scroll-target="#lage-en-funksjon-for-fylke">Lage en funksjon for fylke</a></li>
   <li><a href="#flere-parameter" id="toc-flere-parameter" class="nav-link" data-scroll-target="#flere-parameter">Flere parameter</a></li>
   <li><a href="#standarddefault-parameter" id="toc-standarddefault-parameter" class="nav-link" data-scroll-target="#standarddefault-parameter">Standard/default parameter</a></li>
-  <li><a href="#global-vs-lokal-miljø" id="toc-global-vs-lokal-miljø" class="nav-link" data-scroll-target="#global-vs-lokal-miljø">Global vs Lokal-miljø</a></li>
+  <li><a href="#globalt-vs-lokalt-miljø" id="toc-globalt-vs-lokalt-miljø" class="nav-link" data-scroll-target="#globalt-vs-lokalt-miljø">Globalt vs, Lokalt-miljø</a></li>
   <li><a href="#varsling-i-funksjoner" id="toc-varsling-i-funksjoner" class="nav-link" data-scroll-target="#varsling-i-funksjoner">Varsling i funksjoner</a></li>
   </ul>
 </nav>
@@ -247,21 +247,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </iframe>
 <section id="hva-er-en-funksjon" class="level2">
 <h2 class="anchored" data-anchor-id="hva-er-en-funksjon">Hva er en funksjon?</h2>
-<p>En funksjon er en del av kode som kan brukes om-og-om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).</p>
+<p>En funksjon er en kodedel som kan brukes om og om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).</p>
 <p><img src="./images/funksjon1.PNG" class="img-fluid"></p>
-<p>Parameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere mer.</p>
+<p>En parameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere videre hva funksjonen skal gjøres.</p>
 <p><img src="./images/funksjon2.PNG" class="img-fluid"></p>
-<p>Bruk av funksjoner kan være nyttig: - Gjenbruk - Abstraksjon (trenger ikke å vite hvordan)</p>
+<p>Bruk av funksjoner kan være nyttig for gjenbruk og abstraksjon.</p>
 </section>
 <section id="lage-en-enkel-funksjon" class="level2">
 <h2 class="anchored" data-anchor-id="lage-en-enkel-funksjon">Lage en enkel funksjon</h2>
-<p>Vi lager en funksjon ved å allokere det et navn og spesifisere <code>function()</code>. For eks</p>
+<p>Vi lager en funksjon ved å allokere et navn og spesifisere <code>function()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>min_func <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"hello"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Og etterpå kjøre vi funksjonen ved</p>
+<p>Etterpå kan vi kjøre funksjonen med:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min_func</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -271,7 +271,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="lage-en-funksjon-for-fylke" class="level2">
 <h2 class="anchored" data-anchor-id="lage-en-funksjon-for-fylke">Lage en funksjon for fylke</h2>
-<p>Her skal vi lage en funksjon som ta kommunenummer som input og returnere fylkenummer. Vi spesifisere kommunenummer som en parameter i funksjonen. Vi bruker <code>substr()</code> for å plukke ut de første to siffer.</p>
+<p>Her skal vi lage en funksjon som kan ta kommunenummer som input og returnere fylkenummer. Vi spesifiserer kommunenummer som en parameter i funksjonen. Vi bruker <code>substr()</code> for å plukke ut de første to sifferne.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lage_fylke <span class="ot">&lt;-</span> <span class="cf">function</span>(kommunenr){</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">substr</span>(kommunenr, <span class="dv">1</span>, <span class="dv">2</span>)</span>
@@ -282,11 +282,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "03"</code></pre>
 </div>
 </div>
-<p>Funksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Det kan også spesifiseres med <code>return()</code> ved behov, særlig i kompleks funksjoner med multiple output.</p>
+<p>Funksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Hva som returneres kan også spesifiseres med <code>return()</code> ved behov, særlig nyttig i komplekse funksjoner med flere output.</p>
 </section>
 <section id="flere-parameter" class="level2">
 <h2 class="anchored" data-anchor-id="flere-parameter">Flere parameter</h2>
-<p>Funksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen vi kanskje ønsker å sjekke lengde for å se om ledende 0-er har falt av.</p>
+<p>Funksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen kanskje vi ønsker å sjekke lengden for å se om ledende 0-ere har falt av.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lage_fylke <span class="ot">&lt;-</span> <span class="cf">function</span>(kommunenr, sjekk_lengde){</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(sjekk_lengde <span class="sc">==</span> <span class="cn">TRUE</span>){</span>
@@ -311,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="standarddefault-parameter" class="level2">
 <h2 class="anchored" data-anchor-id="standarddefault-parameter">Standard/default parameter</h2>
-<p>Vi kan sett et parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan har <code>sjekk_lengde=TRUE</code> som standard.</p>
+<p>Vi kan sette standard parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan ha <code>sjekk_lengde=TRUE</code> som standard parameter.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lage_fylke <span class="ot">&lt;-</span> <span class="cf">function</span>(kommunenr, <span class="at">sjekk_lengde =</span> <span class="cn">TRUE</span>){</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(sjekk_lengde <span class="sc">==</span> <span class="cn">TRUE</span>){</span>
@@ -328,11 +328,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "03"</code></pre>
 </div>
 </div>
-<p>Noen ganger kalles disse for “named parameters” eller “keyword arguements”. Standard parameter alltid kommer til sist</p>
+<p>Noen ganger kalles disse for “named parameters” eller “keyword arguements”. Standard parameter kommer alltid til sist.</p>
 </section>
-<section id="global-vs-lokal-miljø" class="level2">
-<h2 class="anchored" data-anchor-id="global-vs-lokal-miljø">Global vs Lokal-miljø</h2>
-<p>Når vi lage en funksjon, lage vi en liten lokal-miljø. Varaiabler som lagres inn i en funksjon påvirke ikke global-miljø og er slettet når funksjonen er ferdig-kjørt. For eksempel om vi har en enkel function som returneres verdien av parameter <code>x</code> vil ikke dette påvirke om vi har en x i det global-miljøet:</p>
+<section id="globalt-vs-lokalt-miljø" class="level2">
+<h2 class="anchored" data-anchor-id="globalt-vs-lokalt-miljø">Globalt vs, Lokalt-miljø</h2>
+<p>Når vi lager en funksjon, lager vi et lite lokalt-miljø. Varaiabler som lagres inn i en funksjon påvirker ikke det globale miljøet og blir slettet når funksjonen er ferdigkjørt. For eksempel, om vi har en enkel funksjon som returnerer verdien av parameter <code>x</code> vil ikke dette påvirkes om vi har en x i det globale miljøet:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>funcx <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  x</span>
@@ -352,8 +352,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="varsling-i-funksjoner" class="level2">
 <h2 class="anchored" data-anchor-id="varsling-i-funksjoner">Varsling i funksjoner</h2>
-<p>Noen ganger øsnker vi at funksjonen si ifra om noen er litt rart eller feil. For at funksjonen skal stoppe bruk <strong><code>stop()</code></strong>. For at det skal gi et varsel bruk <strong><code>warning()</code></strong>.</p>
-<p>For eksempel, her stoppe funksjon om kommunenr er kun 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.</p>
+<p>Noen ganger ønsker vi at funksjonen skal si ifra om noe er litt rart eller feil. For at funksjonen skal stoppe bruker vi <strong><code>stop()</code></strong>. For at det skal gi et varsel bruker vi <strong><code>warning()</code></strong>.</p>
+<p>For eksempel, her stopper funksjon om kommunenr kun er 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lage_fylke <span class="ot">&lt;-</span> <span class="cf">function</span>(kommunenr){</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nchar</span>(kommunenr) <span class="sc">&lt;=</span> <span class="dv">2</span>){</span>

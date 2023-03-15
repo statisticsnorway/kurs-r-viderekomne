@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <meta property="og:title" content="kurs-r-viderekomne - 2&nbsp; Indeksering">
-<meta property="og:description" content="Vektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:">
+<meta property="og:description" content="Vektorer samler flere verdier til et objekt. De må være samme type (numeriske, logiske, karakterer).">
 <meta property="og:site-name" content="kurs-r-viderekomne">
 </head>
 
@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data typer</span></a>
+  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datatyper</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -238,11 +238,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=99009028-f44a-4972-b267-b376f4e8a06b&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="Indeks.mp4">
-</iframe>
 <section id="vektorer" class="level2">
 <h2 class="anchored" data-anchor-id="vektorer">Vektorer</h2>
-<p>Vektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:</p>
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=99009028-f44a-4972-b267-b376f4e8a06b&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="Indeks.mp4">
+</iframe>
+<p>Vektorer samler flere verdier til et objekt. De må være samme type (numeriske, logiske, karakterer).</p>
+<p>Vi kan beregne direkte på alle elementer i en vektor:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>alder <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">49</span>, <span class="dv">39</span>, <span class="dv">51</span>, <span class="dv">73</span>, <span class="dv">41</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>alder <span class="sc">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -250,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1]  98  78 102 146  82</code></pre>
 </div>
 </div>
-<p>Vi kan kjøre tester på alle elementer i en vektor. For eks:</p>
+<p>Vi kan kjøre tester på alle elementer i en vektor:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>alder <span class="sc">==</span> <span class="dv">39</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -260,28 +261,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="indeksering" class="level2">
 <h2 class="anchored" data-anchor-id="indeksering">Indeksering</h2>
-<p>Ved bruk av <strong><code>[ ]</code></strong> kan vi hente ut elementer i en vektor (eller datasett). I R (i motsetting til Python), starter indeksering fra 1! For å hente ut første element for eks:</p>
+<p>Ved bruk av <strong><code>[ ]</code></strong> kan vi hente ut elementene i en vektor (eller et datasett). NB! I R (i motsetting til Python) starter indeksering fra 1.</p>
+<p>For å hente ut første element:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>alder[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 49</code></pre>
 </div>
 </div>
-<p>For å ekskludere et element kan vi bruke -indeks. For eks:</p>
+<p>For å ekskludere et element kan vi bruke -indeks:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>alder[<span class="sc">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 39 51 73 41</code></pre>
 </div>
 </div>
-<p>For å hente ut flere elementer kan vi spesifisere et sekvens</p>
+<p>For å hente ut flere elementer kan vi spesifisere en sekvens:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>alder[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 49 39 51 73</code></pre>
 </div>
 </div>
-<p>Vi kan også bruke indeksering til å endre et spesifikk element. For eks:</p>
+<p>Vi kan også bruke indeksering til å endre et spesifikt element:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>alder[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="dv">48</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>alder[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -435,7 +437,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./datatype.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Data typer</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">Datatyper</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
