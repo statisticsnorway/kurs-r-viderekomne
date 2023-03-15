@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <meta property="og:title" content="kurs-r-viderekomne - 4&nbsp; Kontroll">
-<meta property="og:description" content="For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke ifelse(). Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann.">
+<meta property="og:description" content="For å sammenligne og gjøre noe basert på en betingelse kan vi bruke ifelse().">
 <meta property="og:site-name" content="kurs-r-viderekomne">
 </head>
 
@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data typer</span></a>
+  <a href="./datatype.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datatyper</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -213,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Innhold</h2>
    
   <ul>
-  <li><a href="#små-kontroll-prosesser" id="toc-små-kontroll-prosesser" class="nav-link active" data-scroll-target="#små-kontroll-prosesser">Små kontroll prosesser</a></li>
+  <li><a href="#små-kontrollprosesser" id="toc-små-kontrollprosesser" class="nav-link active" data-scroll-target="#små-kontrollprosesser">Små kontrollprosesser</a></li>
   <li><a href="#store-prosesser" id="toc-store-prosesser" class="nav-link" data-scroll-target="#store-prosesser">Store prosesser</a></li>
   </ul>
 </nav>
@@ -240,18 +240,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=1b3a00bb-befe-415a-a660-c630247e1325&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="if.mp4">
 </iframe>
-<section id="små-kontroll-prosesser" class="level2">
-<h2 class="anchored" data-anchor-id="små-kontroll-prosesser">Små kontroll prosesser</h2>
-<p>For å sammenlign og gjøre noe baserte på en betingelse kan vi bruke <strong><code>ifelse()</code></strong>. Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann.</p>
-<p>For eksempel:</p>
+<section id="små-kontrollprosesser" class="level2">
+<h2 class="anchored" data-anchor-id="små-kontrollprosesser">Små kontrollprosesser</h2>
+<p>For å sammenligne og gjøre noe basert på en betingelse kan vi bruke <strong><code>ifelse()</code></strong>. Vi må spesifisere betingelsen først, og så hva som skal returneres dersom betingelsen er sann, og så hva som skal returneres om betingelsen er usann.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>alder <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">49</span>, <span class="dv">39</span>, <span class="dv">51</span>, <span class="dv">73</span>, <span class="dv">41</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(alder <span class="sc">&lt;</span> <span class="dv">50</span>, <span class="st">"ungere"</span>, <span class="st">"eldere"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(alder <span class="sc">&lt;</span> <span class="dv">50</span>, <span class="st">"yngre"</span>, <span class="st">"eldre"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "ungere" "ungere" "eldere" "eldere" "ungere"</code></pre>
+<pre><code>[1] "yngre" "yngre" "eldre" "eldre" "yngre"</code></pre>
 </div>
 </div>
-<p>Dette kan brukes for å lage nye variabler i et datasett. For eksempel</p>
+<p>Dette kan brukes for å lage nye variabler i et datasett:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -266,23 +265,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, alder)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dt <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alder_kat =</span> <span class="fu">ifelse</span>(alder <span class="sc">&lt;</span> <span class="dv">50</span>, <span class="st">"ungere"</span>, <span class="st">"eldere"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alder_kat =</span> <span class="fu">ifelse</span>(alder <span class="sc">&lt;</span> <span class="dv">50</span>, <span class="st">"yngre"</span>, <span class="st">"eldre"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id alder alder_kat
-1  1    49    ungere
-2  2    39    ungere
-3  3    51    eldere
-4  4    73    eldere
-5  5    41    ungere</code></pre>
+1  1    49     yngre
+2  2    39     yngre
+3  3    51     eldre
+4  4    73     eldre
+5  5    41     yngre</code></pre>
 </div>
 </div>
 </section>
 <section id="store-prosesser" class="level2">
 <h2 class="anchored" data-anchor-id="store-prosesser">Store prosesser</h2>
-<p>For å kontrollere store/lengere prosesser kan vi benytte <strong><code>if</code></strong> og <strong><code>else</code></strong>. Disse kan gå overe flere linjer og ta format:</p>
+<p>For å kontrollere store/lengre prosesser kan vi benytte <strong><code>if</code></strong> og <strong><code>else</code></strong>. Disse kan gå over flere linjer og ta formatet:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (betingelsen){</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  gjør dette kode ...</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  gjør dette ...</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  gjøre dette istedenfor ...</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -448,7 +447,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./datatype.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Data typer</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Datatyper</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

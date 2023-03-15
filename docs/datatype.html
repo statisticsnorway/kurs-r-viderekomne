@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>kurs-r-viderekomne - 3&nbsp; Data typer</title>
+<title>kurs-r-viderekomne - 3&nbsp; Datatyper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,8 +126,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script async="" src="https://hypothes.is/embed.js"></script>
 
 
-<meta property="og:title" content="kurs-r-viderekomne - 3&nbsp; Data typer">
-<meta property="og:description" content="Lister samler objekter/vektorer/datasett. De kan har forskjellige type og størrelser.">
+<meta property="og:title" content="kurs-r-viderekomne - 3&nbsp; Datatyper">
+<meta property="og:description" content="Lister samler objekter, vektorer eller datasett. I motsetning til vektorer kan de inneholde forskjellige datatyper og forskjellig lengder.">
 <meta property="og:site-name" content="kurs-r-viderekomne">
 </head>
 
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Data typer</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Datatyper</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -176,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datatype.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Data typer</span></a>
+  <a href="./datatype.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Datatyper</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -215,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#lister" id="toc-lister" class="nav-link active" data-scroll-target="#lister">Lister</a></li>
   <li><a href="#datasett" id="toc-datasett" class="nav-link" data-scroll-target="#datasett">Datasett</a></li>
-  <li><a href="#forskjellige-datasett-typer" id="toc-forskjellige-datasett-typer" class="nav-link" data-scroll-target="#forskjellige-datasett-typer">Forskjellige datasett typer</a></li>
+  <li><a href="#forskjellige-datasetttyper" id="toc-forskjellige-datasetttyper" class="nav-link" data-scroll-target="#forskjellige-datasetttyper">Forskjellige datasetttyper</a></li>
   </ul>
 </nav>
     </div>
@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Data typer</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Datatyper</span></h1>
 </div>
 
 
@@ -243,9 +243,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </iframe>
 <section id="lister" class="level2">
 <h2 class="anchored" data-anchor-id="lister">Lister</h2>
-<p>Lister samler objekter/vektorer/datasett. De kan har forskjellige type og størrelser.</p>
+<p>Lister samler objekter, vektorer eller datasett. I motsetning til vektorer kan de inneholde forskjellige datatyper og forskjellig lengder.</p>
 <p><img src="./images/liste.PNG" class="img-fluid"></p>
-<p>Vi lager lister ved å bruke <code>list()</code>.</p>
+<p>Vi lager lister ved å bruke <code>list()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>kommune_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">sted =</span> <span class="fu">c</span>(<span class="st">"Oslo"</span>, <span class="st">"Kongsvinger"</span>, <span class="st">"Halden"</span>), </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">snitt_lonn =</span> <span class="fu">c</span>(<span class="dv">636</span>, <span class="dv">504</span>, <span class="dv">552</span>), </span>
@@ -266,14 +266,14 @@ $nivaa
 [1] "Kommune"</code></pre>
 </div>
 </div>
-<p>Vi kan bruke <strong>$</strong> for å få tilgang til et vektor eller element i en liste.</p>
+<p>Vi kan bruke <strong>$</strong> for å få tilgang til en vektor eller et element i en liste:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>kommune_list<span class="sc">$</span>snitt_lonn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 636 504 552</code></pre>
 </div>
 </div>
-<p>Vi kan kombinere dette med <code>[ ]</code> for å hente ut elementer.</p>
+<p>Vi kan kombinere dette med <code>[ ]</code> for å hente ut elementer:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>kommune_list<span class="sc">$</span>snitt_lonn[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -290,20 +290,20 @@ $nivaa
 <p></p><figcaption class="figure-caption">Eksempel datasett</figcaption><p></p>
 </figure>
 </div>
-<p>Vi bruke <code>data.frame()</code> for å lage en vanlig R datasett</p>
+<p>Vi bruker <code>data.frame()</code> for å lage et vanlig R datasett:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>kommune_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sted =</span> <span class="fu">c</span>(<span class="st">"Oslo"</span>, <span class="st">"Kongsvinger"</span>, <span class="st">"Halden"</span>), </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">antall_lonnstakere =</span> <span class="fu">c</span>(<span class="dv">467400</span>, <span class="dv">8300</span>, <span class="dv">12600</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Igjen, vi kan bruke <strong>$</strong> for å få tilgang til et vektor og <code>[ ]</code> for å hente ut elementer.</p>
+<p>Igjen kan vi bruke <strong>$</strong> for å få tilgang til en vektor og <code>[ ]</code> for å hente ut elementer:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>kommune_data<span class="sc">$</span>snitt_lonn[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>NULL</code></pre>
 </div>
 </div>
-<p>NB: I <em>tidyverse</em> bruker vi variabelnavn istedenfor <code>$</code>.Dette har konsekvenser for kjøretid og noen begrensninger men <em>tidyverse</em> er veldig intuitiv og givende pakke for analysering av data.</p>
-<p>Noen nyttige funksjoner som kan benyttes ved datasett</p>
+<p>NB: I <em>tidyverse</em> bruker vi variabelnavn istedenfor <code>$</code>.Dette har konsekvenser for kjøretid og noen begrensninger, likevel er <em>tidyverse</em> en veldig intuitiv og givende pakke for analysering av data.</p>
+<p>Noen nyttige funksjoner som kan benyttes ved datasett:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(kommune_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -334,8 +334,8 @@ $ antall_lonnstakere &lt;dbl&gt; 467400, 8300, 12600</code></pre>
 </div>
 </div>
 </section>
-<section id="forskjellige-datasett-typer" class="level2">
-<h2 class="anchored" data-anchor-id="forskjellige-datasett-typer">Forskjellige datasett typer</h2>
+<section id="forskjellige-datasetttyper" class="level2">
+<h2 class="anchored" data-anchor-id="forskjellige-datasetttyper">Forskjellige datasetttyper</h2>
 <p>Det er forskjlellige måte å formatere data i R. Disse er mest vanlig:</p>
 <table class="table">
 <thead>

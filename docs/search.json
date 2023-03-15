@@ -4,140 +4,140 @@
     "href": "index.html",
     "title": "R for viderekomne",
     "section": "",
-    "text": "Velkommen til kurset! Dette er et kurs for de som har litt R programmering fra før.\n\nIndexering av vektorer\nForklaring av forkjellige datasett typer\nKontroll setninger med if og else\nFor- og while-løkker\nHvordan å skrive funksjoner\nTips til feilsøking\nAndre ting og vei videre"
+    "text": "Velkommen til kurset! Dette er et kurs for de som har litt R programmering fra før.\n\nIndeksering av vektorer\nForklaring av forskjellige datasetttyper\nKontroll setninger med if og else\nFor- og whileløkker\nHvordan skrive funksjoner\nTips til feilsøking\nAndre ting og veien videre"
   },
   {
     "objectID": "indeksering.html#vektorer",
     "href": "indeksering.html#vektorer",
     "title": "Indeksering",
     "section": "Vektorer",
-    "text": "Vektorer\nVektorer samler flere verdier til et objekt. De må har samme type innehold (for eks. alle numeriske). Vi kan beregne direkte på alle elementer i en vektor. For eks:\n\nalder <- c(49, 39, 51, 73, 41)\nalder * 2\n\n[1]  98  78 102 146  82\n\n\nVi kan kjøre tester på alle elementer i en vektor. For eks:\n\nalder == 39\n\n[1] FALSE  TRUE FALSE FALSE FALSE"
+    "text": "Vektorer\n\n\nVektorer samler flere verdier til et objekt. De må være samme type (numeriske, logiske, karakterer).\nVi kan beregne direkte på alle elementer i en vektor:\n\nalder <- c(49, 39, 51, 73, 41)\nalder * 2\n\n[1]  98  78 102 146  82\n\n\nVi kan kjøre tester på alle elementer i en vektor:\n\nalder == 39\n\n[1] FALSE  TRUE FALSE FALSE FALSE"
   },
   {
     "objectID": "indeksering.html#indeksering",
     "href": "indeksering.html#indeksering",
     "title": "Indeksering",
     "section": "Indeksering",
-    "text": "Indeksering\nVed bruk av [ ] kan vi hente ut elementer i en vektor (eller datasett). I R (i motsetting til Python), starter indeksering fra 1! For å hente ut første element for eks:\n\nalder[1]\n\n[1] 49\n\n\nFor å ekskludere et element kan vi bruke -indeks. For eks:\n\nalder[-1]\n\n[1] 39 51 73 41\n\n\nFor å hente ut flere elementer kan vi spesifisere et sekvens\n\nalder[1:4]\n\n[1] 49 39 51 73\n\n\nVi kan også bruke indeksering til å endre et spesifikk element. For eks:\n\nalder[1] <- 48\nalder[1]\n\n[1] 48"
+    "text": "Indeksering\nVed bruk av [ ] kan vi hente ut elementene i en vektor (eller et datasett). NB! I R (i motsetting til Python) starter indeksering fra 1.\nFor å hente ut første element:\n\nalder[1]\n\n[1] 49\n\n\nFor å ekskludere et element kan vi bruke -indeks:\n\nalder[-1]\n\n[1] 39 51 73 41\n\n\nFor å hente ut flere elementer kan vi spesifisere en sekvens:\n\nalder[1:4]\n\n[1] 49 39 51 73\n\n\nVi kan også bruke indeksering til å endre et spesifikt element:\n\nalder[1] <- 48\nalder[1]\n\n[1] 48"
   },
   {
     "objectID": "datatype.html#lister",
     "href": "datatype.html#lister",
-    "title": "Data typer",
+    "title": "Datatyper",
     "section": "Lister",
-    "text": "Lister\nLister samler objekter/vektorer/datasett. De kan har forskjellige type og størrelser.\n\nVi lager lister ved å bruke list().\n\nkommune_list <- list(sted = c(\"Oslo\", \"Kongsvinger\", \"Halden\"), \n                     snitt_lonn = c(636, 504, 552), \n                     antall_lonnstakere = c(467400, 8300, 12600),\n                     nivaa = \"Kommune\")\nkommune_list\n\n$sted\n[1] \"Oslo\"        \"Kongsvinger\" \"Halden\"     \n\n$snitt_lonn\n[1] 636 504 552\n\n$antall_lonnstakere\n[1] 467400   8300  12600\n\n$nivaa\n[1] \"Kommune\"\n\n\nVi kan bruke $ for å få tilgang til et vektor eller element i en liste.\n\nkommune_list$snitt_lonn\n\n[1] 636 504 552\n\n\nVi kan kombinere dette med [ ] for å hente ut elementer.\n\nkommune_list$snitt_lonn[1]\n\n[1] 636"
+    "text": "Lister\nLister samler objekter, vektorer eller datasett. I motsetning til vektorer kan de inneholde forskjellige datatyper og forskjellig lengder.\n\nVi lager lister ved å bruke list():\n\nkommune_list <- list(sted = c(\"Oslo\", \"Kongsvinger\", \"Halden\"), \n                     snitt_lonn = c(636, 504, 552), \n                     antall_lonnstakere = c(467400, 8300, 12600),\n                     nivaa = \"Kommune\")\nkommune_list\n\n$sted\n[1] \"Oslo\"        \"Kongsvinger\" \"Halden\"     \n\n$snitt_lonn\n[1] 636 504 552\n\n$antall_lonnstakere\n[1] 467400   8300  12600\n\n$nivaa\n[1] \"Kommune\"\n\n\nVi kan bruke $ for å få tilgang til en vektor eller et element i en liste:\n\nkommune_list$snitt_lonn\n\n[1] 636 504 552\n\n\nVi kan kombinere dette med [ ] for å hente ut elementer:\n\nkommune_list$snitt_lonn[1]\n\n[1] 636"
   },
   {
     "objectID": "datatype.html#datasett",
     "href": "datatype.html#datasett",
-    "title": "Data typer",
+    "title": "Datatyper",
     "section": "Datasett",
-    "text": "Datasett\nDatasett er lister som samler vektorer med samme lengde.\n\n\n\nEksempel datasett\n\n\nVi bruke data.frame() for å lage en vanlig R datasett\n\nkommune_data <- data.frame(sted = c(\"Oslo\", \"Kongsvinger\", \"Halden\"), \n                          antall_lonnstakere = c(467400, 8300, 12600))\n\nIgjen, vi kan bruke $ for å få tilgang til et vektor og [ ] for å hente ut elementer.\n\nkommune_data$snitt_lonn[2]\n\nNULL\n\n\nNB: I tidyverse bruker vi variabelnavn istedenfor $.Dette har konsekvenser for kjøretid og noen begrensninger men tidyverse er veldig intuitiv og givende pakke for analysering av data.\nNoen nyttige funksjoner som kan benyttes ved datasett\n\nnrow(kommune_data)\n\n[1] 3\n\nncol(kommune_data)\n\n[1] 2\n\n\n\nhead(kommune_data)\n\n         sted antall_lonnstakere\n1        Oslo             467400\n2 Kongsvinger               8300\n3      Halden              12600\n\n\n\nlibrary(tidyverse)\nglimpse(kommune_data)\n\nRows: 3\nColumns: 2\n$ sted               <chr> \"Oslo\", \"Kongsvinger\", \"Halden\"\n$ antall_lonnstakere <dbl> 467400, 8300, 12600"
+    "text": "Datasett\nDatasett er lister som samler vektorer med samme lengde.\n\n\n\nEksempel datasett\n\n\nVi bruker data.frame() for å lage et vanlig R datasett:\n\nkommune_data <- data.frame(sted = c(\"Oslo\", \"Kongsvinger\", \"Halden\"), \n                          antall_lonnstakere = c(467400, 8300, 12600))\n\nIgjen kan vi bruke $ for å få tilgang til en vektor og [ ] for å hente ut elementer:\n\nkommune_data$snitt_lonn[2]\n\nNULL\n\n\nNB: I tidyverse bruker vi variabelnavn istedenfor $.Dette har konsekvenser for kjøretid og noen begrensninger, likevel er tidyverse en veldig intuitiv og givende pakke for analysering av data.\nNoen nyttige funksjoner som kan benyttes ved datasett:\n\nnrow(kommune_data)\n\n[1] 3\n\nncol(kommune_data)\n\n[1] 2\n\n\n\nhead(kommune_data)\n\n         sted antall_lonnstakere\n1        Oslo             467400\n2 Kongsvinger               8300\n3      Halden              12600\n\n\n\nlibrary(tidyverse)\nglimpse(kommune_data)\n\nRows: 3\nColumns: 2\n$ sted               <chr> \"Oslo\", \"Kongsvinger\", \"Halden\"\n$ antall_lonnstakere <dbl> 467400, 8300, 12600"
   },
   {
-    "objectID": "datatype.html#forskjellige-datasett-typer",
-    "href": "datatype.html#forskjellige-datasett-typer",
-    "title": "Data typer",
-    "section": "Forskjellige datasett typer",
-    "text": "Forskjellige datasett typer\nDet er forskjlellige måte å formatere data i R. Disse er mest vanlig:\n\n\n\nData frame type\nCode for formatting\n\n\n\n\nNormal data frame\ndata.frame()\n\n\ntibble (tidyverse)\nas_tibble()\n\n\ndata table (data.table)\ndata.table()"
+    "objectID": "datatype.html#forskjellige-datasetttyper",
+    "href": "datatype.html#forskjellige-datasetttyper",
+    "title": "Datatyper",
+    "section": "Forskjellige datasetttyper",
+    "text": "Forskjellige datasetttyper\nDet er forskjlellige måte å formatere data i R. Disse er mest vanlig:\n\n\n\nData frame type\nCode for formatting\n\n\n\n\nNormal data frame\ndata.frame()\n\n\ntibble (tidyverse)\nas_tibble()\n\n\ndata table (data.table)\ndata.table()"
   },
   {
-    "objectID": "kontroll.html#små-kontroll-prosesser",
-    "href": "kontroll.html#små-kontroll-prosesser",
+    "objectID": "kontroll.html#små-kontrollprosesser",
+    "href": "kontroll.html#små-kontrollprosesser",
     "title": "Kontroll",
-    "section": "Små kontroll prosesser",
-    "text": "Små kontroll prosesser\nFor å sammenlign og gjøre noe baserte på en betingelse kan vi bruke ifelse(). Spesifisere betingelsen først, og så hva skal returnere ved sann, og så hva ska returneres om betingelsen er usann.\nFor eksempel:\n\nalder <- c(49, 39, 51, 73, 41)\nifelse(alder < 50, \"ungere\", \"eldere\")\n\n[1] \"ungere\" \"ungere\" \"eldere\" \"eldere\" \"ungere\"\n\n\nDette kan brukes for å lage nye variabler i et datasett. For eksempel\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\ndt <- data.frame(id = 1:5, alder)\ndt %>%\n  mutate(alder_kat = ifelse(alder < 50, \"ungere\", \"eldere\"))\n\n  id alder alder_kat\n1  1    49    ungere\n2  2    39    ungere\n3  3    51    eldere\n4  4    73    eldere\n5  5    41    ungere"
+    "section": "Små kontrollprosesser",
+    "text": "Små kontrollprosesser\nFor å sammenligne og gjøre noe basert på en betingelse kan vi bruke ifelse(). Vi må spesifisere betingelsen først, og så hva som skal returneres dersom betingelsen er sann, og så hva som skal returneres om betingelsen er usann.\n\nalder <- c(49, 39, 51, 73, 41)\nifelse(alder < 50, \"yngre\", \"eldre\")\n\n[1] \"yngre\" \"yngre\" \"eldre\" \"eldre\" \"yngre\"\n\n\nDette kan brukes for å lage nye variabler i et datasett:\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\ndt <- data.frame(id = 1:5, alder)\ndt %>%\n  mutate(alder_kat = ifelse(alder < 50, \"yngre\", \"eldre\"))\n\n  id alder alder_kat\n1  1    49     yngre\n2  2    39     yngre\n3  3    51     eldre\n4  4    73     eldre\n5  5    41     yngre"
   },
   {
     "objectID": "kontroll.html#store-prosesser",
     "href": "kontroll.html#store-prosesser",
     "title": "Kontroll",
     "section": "Store prosesser",
-    "text": "Store prosesser\nFor å kontrollere store/lengere prosesser kan vi benytte if og else. Disse kan gå overe flere linjer og ta format:\n\nif (betingelsen){\n  gjør dette kode ...\n} else {\n  gjøre dette istedenfor ...\n}\n\nFor eksempel:\n\nif (all(dt$alder < 70)){\n  print(\"Alle IOer er under 70\")\n} else {\n  print(\"Alle IOer med alder 70+ er fjernet.\")\n  dt %>% \n    filter(alder < 70)\n}\n\n[1] \"Alle IOer med alder 70+ er fjernet.\"\n\n\n  id alder\n1  1    49\n2  2    39\n3  3    51\n4  5    41"
+    "text": "Store prosesser\nFor å kontrollere store/lengre prosesser kan vi benytte if og else. Disse kan gå over flere linjer og ta formatet:\n\nif (betingelsen){\n  gjør dette ...\n} else {\n  gjøre dette istedenfor ...\n}\n\nFor eksempel:\n\nif (all(dt$alder < 70)){\n  print(\"Alle IOer er under 70\")\n} else {\n  print(\"Alle IOer med alder 70+ er fjernet.\")\n  dt %>% \n    filter(alder < 70)\n}\n\n[1] \"Alle IOer med alder 70+ er fjernet.\"\n\n\n  id alder\n1  1    49\n2  2    39\n3  3    51\n4  5    41"
   },
   {
     "objectID": "loops.html#for-løkker",
     "href": "loops.html#for-løkker",
     "title": "Løkker",
     "section": "For-løkker",
-    "text": "For-løkker\nFor-løkker brukes til å kjøre gjennom kode et bestemt antall ganger\n\nDet er vanlig å kjøre gjennom en sekvens. For eks:\n\nalder <- c(49, 39, 51, 73, 41)\n\nfor (i in 1:5){\n  print(i)\n  print(alder[i])\n}\n\n[1] 1\n[1] 49\n[1] 2\n[1] 39\n[1] 3\n[1] 51\n[1] 4\n[1] 73\n[1] 5\n[1] 41\n\n\nVi kan også lage løkker med en vektor. For eks:\n\nfor (a in alder){\n  print(a)\n}\n\n[1] 49\n[1] 39\n[1] 51\n[1] 73\n[1] 41"
+    "text": "For-løkker\nFor-løkker brukes til å kjøre gjennom kode et bestemt antall ganger\n\nDet er vanlig å kjøre gjennom en sekvens. For eks:\n\nalder <- c(49, 39, 51, 73, 41)\n\nfor (i in 1:5){\n  print(i)\n  print(alder[i])\n}\n\n[1] 1\n[1] 49\n[1] 2\n[1] 39\n[1] 3\n[1] 51\n[1] 4\n[1] 73\n[1] 5\n[1] 41\n\n\nVi kan også lage løkker med en vektor:\n\nfor (a in alder){\n  print(a)\n}\n\n[1] 49\n[1] 39\n[1] 51\n[1] 73\n[1] 41"
   },
   {
     "objectID": "loops.html#while-løkker",
     "href": "loops.html#while-løkker",
     "title": "Løkker",
     "section": "While-løkker",
-    "text": "While-løkker\nWhile-løkker sjekk en betingelse for å bestemme om det skal fortsette å kjøres. \nFor eksempel:\n\nn <- 1\nwhile (n < 10){\n  print(n)\n  n <- n + runif(1)\n}\n\n[1] 1\n[1] 1.215509\n[1] 1.719224\n[1] 1.787002\n[1] 2.02973\n[1] 2.882941\n[1] 3.284548\n[1] 4.179464\n[1] 4.687117\n[1] 4.890747\n[1] 5.768935\n[1] 6.651896\n[1] 7.462691\n[1] 8.227248\n[1] 9.096581\n[1] 9.098579\n\nn\n\n[1] 10.05743\n\n\nWhile-løkker brukes ofte i prosesser som har et tilfeldig komponent. I eksempel over, runif() funksjonen trekkes et tilfeldig tall mellom 0 og 1."
+    "text": "While-løkker\nWhile-løkker sjekk en betingelse for å bestemme om den skal fortsette å kjøre. \nFor eksempel:\n\nn <- 1\nwhile (n < 10){\n  print(n)\n  n <- n + runif(1)\n}\n\n[1] 1\n[1] 1.170163\n[1] 1.459175\n[1] 1.968393\n[1] 2.024199\n[1] 2.035052\n[1] 2.08402\n[1] 3.028929\n[1] 3.475093\n[1] 3.770088\n[1] 4.149407\n[1] 4.648243\n[1] 5.413544\n[1] 5.490231\n[1] 6.347478\n[1] 6.633133\n[1] 7.625932\n[1] 8.572155\n[1] 8.623897\n[1] 8.965498\n[1] 9.063839\n[1] 9.630238\n\nn\n\n[1] 10.13578\n\n\nWhile-løkker brukes ofte i prosesser som har en tilfeldig komponent. I eksempelet over trekker runif() funksjonen et tilfeldig tall mellom 0 og 1."
   },
   {
     "objectID": "funksjoner.html#hva-er-en-funksjon",
     "href": "funksjoner.html#hva-er-en-funksjon",
     "title": "Funksjoner",
     "section": "Hva er en funksjon?",
-    "text": "Hva er en funksjon?\nEn funksjon er en del av kode som kan brukes om-og-om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).\n\nParameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere mer.\n\nBruk av funksjoner kan være nyttig: - Gjenbruk - Abstraksjon (trenger ikke å vite hvordan)"
+    "text": "Hva er en funksjon?\nEn funksjon er en kodedel som kan brukes om og om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).\n\nEn parameter er tilleggsinformasjon som sendes inn til funksjonen for å spesifisere videre hva funksjonen skal gjøres.\n\nBruk av funksjoner kan være nyttig for gjenbruk og abstraksjon."
   },
   {
     "objectID": "funksjoner.html#lage-en-enkel-funksjon",
     "href": "funksjoner.html#lage-en-enkel-funksjon",
     "title": "Funksjoner",
     "section": "Lage en enkel funksjon",
-    "text": "Lage en enkel funksjon\nVi lager en funksjon ved å allokere det et navn og spesifisere function(). For eks\n\nmin_func <- function(){\n  print(\"hello\")\n}\n\nOg etterpå kjøre vi funksjonen ved\n\nmin_func()\n\n[1] \"hello\""
+    "text": "Lage en enkel funksjon\nVi lager en funksjon ved å allokere et navn og spesifisere function():\n\nmin_func <- function(){\n  print(\"hello\")\n}\n\nEtterpå kan vi kjøre funksjonen med:\n\nmin_func()\n\n[1] \"hello\""
   },
   {
     "objectID": "funksjoner.html#lage-en-funksjon-for-fylke",
     "href": "funksjoner.html#lage-en-funksjon-for-fylke",
     "title": "Funksjoner",
     "section": "Lage en funksjon for fylke",
-    "text": "Lage en funksjon for fylke\nHer skal vi lage en funksjon som ta kommunenummer som input og returnere fylkenummer. Vi spesifisere kommunenummer som en parameter i funksjonen. Vi bruker substr() for å plukke ut de første to siffer.\n\nlage_fylke <- function(kommunenr){\n  substr(kommunenr, 1, 2)\n}\n\nlage_fylke(\"0301\")\n\n[1] \"03\"\n\n\nFunksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Det kan også spesifiseres med return() ved behov, særlig i kompleks funksjoner med multiple output."
+    "text": "Lage en funksjon for fylke\nHer skal vi lage en funksjon som kan ta kommunenummer som input og returnere fylkenummer. Vi spesifiserer kommunenummer som en parameter i funksjonen. Vi bruker substr() for å plukke ut de første to sifferne.\n\nlage_fylke <- function(kommunenr){\n  substr(kommunenr, 1, 2)\n}\n\nlage_fylke(\"0301\")\n\n[1] \"03\"\n\n\nFunksjoner kan gå over flere linjer. Den siste linjen er det som returneres. Hva som returneres kan også spesifiseres med return() ved behov, særlig nyttig i komplekse funksjoner med flere output."
   },
   {
     "objectID": "funksjoner.html#flere-parameter",
     "href": "funksjoner.html#flere-parameter",
     "title": "Funksjoner",
     "section": "Flere parameter",
-    "text": "Flere parameter\nFunksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen vi kanskje ønsker å sjekke lengde for å se om ledende 0-er har falt av.\n\nlage_fylke <- function(kommunenr, sjekk_lengde){\n  if(sjekk_lengde == TRUE){\n    kommunenr <- ifelse(nchar(kommunenr) == 3, \n                        paste(\"0\", kommunenr, sep = \"\"), \n                        kommunenr)\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\n\nlage_fylke(kommunenr = \"301\", sjekk_lengde = TRUE)\n\n[1] \"03\"\n\nlage_fylke(kommunenr = \"301\", sjekk_lengde = FALSE)\n\n[1] \"30\""
+    "text": "Flere parameter\nFunksjoner kan ta mer enn èn paramter. For eksempel i fylke-funksjonen kanskje vi ønsker å sjekke lengden for å se om ledende 0-ere har falt av.\n\nlage_fylke <- function(kommunenr, sjekk_lengde){\n  if(sjekk_lengde == TRUE){\n    kommunenr <- ifelse(nchar(kommunenr) == 3, \n                        paste(\"0\", kommunenr, sep = \"\"), \n                        kommunenr)\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\n\nlage_fylke(kommunenr = \"301\", sjekk_lengde = TRUE)\n\n[1] \"03\"\n\nlage_fylke(kommunenr = \"301\", sjekk_lengde = FALSE)\n\n[1] \"30\""
   },
   {
     "objectID": "funksjoner.html#standarddefault-parameter",
     "href": "funksjoner.html#standarddefault-parameter",
     "title": "Funksjoner",
     "section": "Standard/default parameter",
-    "text": "Standard/default parameter\nVi kan sett et parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan har sjekk_lengde=TRUE som standard.\n\nlage_fylke <- function(kommunenr, sjekk_lengde = TRUE){\n  if(sjekk_lengde == TRUE){\n    kommunenr <- ifelse(nchar(kommunenr) == 3, \n                        paste(\"0\", kommunenr, sep = \"\"), \n                        kommunenr)\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\nlage_fylke(\"301\")\n\n[1] \"03\"\n\n\nNoen ganger kalles disse for “named parameters” eller “keyword arguements”. Standard parameter alltid kommer til sist"
+    "text": "Standard/default parameter\nVi kan sette standard parameter verdier for å slippe å spesifisere hver gang. For eksemepel, samme funksjon over kan ha sjekk_lengde=TRUE som standard parameter.\n\nlage_fylke <- function(kommunenr, sjekk_lengde = TRUE){\n  if(sjekk_lengde == TRUE){\n    kommunenr <- ifelse(nchar(kommunenr) == 3, \n                        paste(\"0\", kommunenr, sep = \"\"), \n                        kommunenr)\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\nlage_fylke(\"301\")\n\n[1] \"03\"\n\n\nNoen ganger kalles disse for “named parameters” eller “keyword arguements”. Standard parameter kommer alltid til sist."
   },
   {
-    "objectID": "funksjoner.html#global-vs-lokal-miljø",
-    "href": "funksjoner.html#global-vs-lokal-miljø",
+    "objectID": "funksjoner.html#globalt-vs-lokalt-miljø",
+    "href": "funksjoner.html#globalt-vs-lokalt-miljø",
     "title": "Funksjoner",
-    "section": "Global vs Lokal-miljø",
-    "text": "Global vs Lokal-miljø\nNår vi lage en funksjon, lage vi en liten lokal-miljø. Varaiabler som lagres inn i en funksjon påvirke ikke global-miljø og er slettet når funksjonen er ferdig-kjørt. For eksempel om vi har en enkel function som returneres verdien av parameter x vil ikke dette påvirke om vi har en x i det global-miljøet:\n\nfuncx <- function(x){\n  x\n}\n\n\nx <- 2\nfuncx(x = 4)\n\n[1] 4\n\nx\n\n[1] 2"
+    "section": "Globalt vs, Lokalt-miljø",
+    "text": "Globalt vs, Lokalt-miljø\nNår vi lager en funksjon, lager vi et lite lokalt-miljø. Varaiabler som lagres inn i en funksjon påvirker ikke det globale miljøet og blir slettet når funksjonen er ferdigkjørt. For eksempel, om vi har en enkel funksjon som returnerer verdien av parameter x vil ikke dette påvirkes om vi har en x i det globale miljøet:\n\nfuncx <- function(x){\n  x\n}\n\n\nx <- 2\nfuncx(x = 4)\n\n[1] 4\n\nx\n\n[1] 2"
   },
   {
     "objectID": "funksjoner.html#varsling-i-funksjoner",
     "href": "funksjoner.html#varsling-i-funksjoner",
     "title": "Funksjoner",
     "section": "Varsling i funksjoner",
-    "text": "Varsling i funksjoner\nNoen ganger øsnker vi at funksjonen si ifra om noen er litt rart eller feil. For at funksjonen skal stoppe bruk stop(). For at det skal gi et varsel bruk warning().\nFor eksempel, her stoppe funksjon om kommunenr er kun 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.\n\nlage_fylke <- function(kommunenr){\n  if (nchar(kommunenr) <= 2){\n    stop(\"Kommune nummer var ikke gjeldig.\")\n  }\n  if (nchar(kommunenr) == 3){\n    warning(\"Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\\n\")\n    kommunenr <- paste(\"0\", kommunenr, sep = \"\")\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\n\nlage_fylke(kommunenr = \"03\")\n\n\n\nlage_fylke(kommunenr = \"301\")\n\nWarning in lage_fylke(kommunenr = \"301\"): Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\n\n\n[1] \"03\"\n\n\n\nlage_fylke(kommunenr = \"0301\")\n\n[1] \"03\""
+    "text": "Varsling i funksjoner\nNoen ganger ønsker vi at funksjonen skal si ifra om noe er litt rart eller feil. For at funksjonen skal stoppe bruker vi stop(). For at det skal gi et varsel bruker vi warning().\nFor eksempel, her stopper funksjon om kommunenr kun er 2-siffer. Ved 3-siffer gis et varsel at en ledende 0 er lagt på.\n\nlage_fylke <- function(kommunenr){\n  if (nchar(kommunenr) <= 2){\n    stop(\"Kommune nummer var ikke gjeldig.\")\n  }\n  if (nchar(kommunenr) == 3){\n    warning(\"Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\\n\")\n    kommunenr <- paste(\"0\", kommunenr, sep = \"\")\n  }\n  fylke <- substr(kommunenr, 1, 2)\n  fylke\n}\n\n\nlage_fylke(kommunenr = \"03\")\n\n\n\nlage_fylke(kommunenr = \"301\")\n\nWarning in lage_fylke(kommunenr = \"301\"): Kommunenummer er lendge 3 og har blitt fylt med en ledende 0\n\n\n[1] \"03\"\n\n\n\nlage_fylke(kommunenr = \"0301\")\n\n[1] \"03\""
   },
   {
     "objectID": "feil.html#tips-til-feilsøking-av-kode",
     "href": "feil.html#tips-til-feilsøking-av-kode",
     "title": "R feilsøking",
     "section": "Tips til feilsøking av kode",
-    "text": "Tips til feilsøking av kode\n\nGenerelle\n\nKjør kode linje-ved-linje for å isolere feilen.\nKopiere feilmelding du får inn til google (rense bort variabel/datasett navn osv først).\nFor skriving av egen-funksjoner det kan hjelpe å sette inn noen print-setninger for å se hvor det stopper opp. Eller bruk debug().\nSjekk at data er formatten som forventet (tibble vs. data.frame)\nPrøv å spørre Chatgpt\nSkriv om hjelp på yammer.\n\n\n\nSpesifikk\n\n\n\n\n\n\n\nVanlige feilmeldinger\nTips\n\n\n\n\n“argument is of length zero”\nSe statology\n\n\n“could not find function”\nSjekk at du har stavet riktig (små og store bokstaver). Sjekk at pakken er installerte og kalt inn.\n\n\n“subscript out of bounds”\nSjekk at indeks ikke er for stor (utenfor vektor/datasett)\n\n\n“no applicable method”\nSjekk at data er i format som forventet (eg data.frame, tibble, data.table osv)\n\n\n“cannot open file”\nSjekk at du har stavet filnavn riktig. Og sjekk filsti. Hvor er du? Bruk getwd(). Navigere til foreldre mappen ved .. i sti. Bruk Sys.getenv(“ARBTAKER”) for å hente inn miljøvariabler. DU kan også skriv ut alle filene ved list.files()"
+    "text": "Tips til feilsøking av kode\n\nGenerelle\n\nKjør kode linje-ved-linje for å isolere feilen.\nKopier feilmelding du får inn til google (rens bort variabel/datasett navn osv. først).\nFor skriving av egne funksjoner kan det hjelpe å sette inn noen print-setninger for å se hvor det stopper opp. Eller bruk debug(), en innebygd R funksjon. Les dokumentasjon for debug().\nSjekk at data er formatert som forventet (tibble vs. data.frame).\nPrøv å spørre Chatgpt\nSpør om hjelp på yammer.\n\n\n\nSpesifikk\n\n\n\n\n\n\n\nVanlige feilmeldinger\nTips\n\n\n\n\n“argument is of length zero”\nSe statology\n\n\n“could not find function”\nSjekk at du har stavet riktig (små og store bokstaver). Sjekk at pakkene er installerte og kalt inn.\n\n\n“subscript out of bounds”\nSjekk at indeks ikke er større en vektor/datasett\n\n\n“no applicable method”\nSjekk at data er formatert som forventet (eg data.frame, tibble, data.table osv)\n\n\n“cannot open file”\nSjekk at du har stavet filnavn riktig, og sjekk filsti. Hvor er du? Bruk getwd(). Naviger til foreldre mappen ved .. i sti. Bruk Sys.getenv(“ARBTAKER”) for å hente inn miljøvariabler. Du kan også skriv ut alle filene ved list.files()"
   },
   {
     "objectID": "feil.html#tips-til-feilsøking-av-tekniske-problemer",
     "href": "feil.html#tips-til-feilsøking-av-tekniske-problemer",
     "title": "R feilsøking",
     "section": "Tips til feilsøking av tekniske problemer",
-    "text": "Tips til feilsøking av tekniske problemer\n\nGenerelle\n\nKopiere feilmelding inn til google.\nSend en melding til kundeservice. Prøv å beskrive problemet. Lim inn feilmelding og kode du har kjørt.\nHvis det er på Dapla - skriv på Slack: ‘hjelp_dapla’. Gjerne prøve å lage et lite eksempel av når problemet oppstår som kalles et Minimal reproducible example\n\n\n\nSpesifikk\n\n\n\nFeilmeldinger\nTips\n\n\n\n\nshiny\n\nBruker du jupyter?\n\nBruk wrapper funksjon i +fellesr\n\n\n\n\npakke installering\n\nBruk renv :-)\n\nførste gang: kjør renv::init()\nbruk renv::install('<pakker>') for å installere\nIkke står på hjemmeområde men i en prosjektmappe.\nHvis “no package available”, sjekk i renv.lock at URL er riktig\n\nURL skal ha “nexus.ssb.no” i navn\n\nFor multi-mappe prosjekter - har en renv i hovedmappen\n\nbruk renv::autoload() i notebookene\n\n\n\n\n\nGit\n\nMangler git fane i RStudio?\n\nHvis du har en lokal RStudio på PC sjekk ut happygitwithr\n\nFår ikke commit?\n\nHusk å skrive inn en melding før du trykker på commit knappen.\n\nPull/push knapp er grå?\n\nHar du noen endringer/commits til å pushe?\nBytte til kommandoer for å sjekke status med git status\nEvt. bruk kommandoer istedenfor knapper"
+    "text": "Tips til feilsøking av tekniske problemer\n\nGenerelle\n\nKopier feilmelding inn til google.\nSend en melding til kundeservice. Prøv å beskrive problemet. Lim inn feilmelding og kode du har kjørt.\nHvis det er på Dapla - skriv på Slack: ‘hjelp_dapla’. Gjerne prøve å lage et lite eksempel av når problemet oppstår som kalles et Minimal reproducible example\n\n\n\nSpesifikk\n\n\n\nFeilmeldinger\nTips\n\n\n\n\nshiny\n\nBruker du jupyter?\n\nBruk wrapper funksjon i +fellesr\n\n\n\n\npakke installering\n\nBruk renv :-)\n\nførste gang: kjør renv::init()\nbruk renv::install('<pakker>') for å installere\nIkke står på hjemmeområde men i en prosjektmappe.\nHvis “no package available”, sjekk i renv.lock at URL er riktig\n\nURL skal ha “nexus.ssb.no” i navn\n\nFor multi-mappe prosjekter - har en renv i hovedmappen\n\nbruk renv::autoload() i notebookene\n\n\n\n\n\nGit\n\nMangler git fane i RStudio?\n\nHvis du har en lokal RStudio på PC sjekk ut happygitwithr\n\nFår ikke commit?\n\nHusk å skrive inn en melding før du trykker på commit knappen.\n\nPull/push knapp er grå?\n\nHar du noen endringer/commits til å pushe?\nBytte til kommandoer for å sjekke status med git status\nEvt. bruk kommandoer istedenfor knapper"
   },
   {
     "objectID": "videre.html#klassr",
     "href": "videre.html#klassr",
     "title": "Videre bruk av R",
     "section": "klassR",
-    "text": "klassR\nklassR pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan å bruke pakken ligger i en introduksjon til klassR pakken"
+    "text": "klassR\nklassR pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan du kan bruke pakken ligger i en introduksjon til klassR pakken"
   },
   {
     "objectID": "videre.html#metodebibliotek",
@@ -151,7 +151,7 @@
     "href": "videre.html#fellesr",
     "title": "Videre bruk av R",
     "section": "fellesR",
-    "text": "fellesR\nR-pakken fellesR er en samling av funksjoner som kan være nyttige for flere på SSB. Alle er velkommen til å bidra med egne funksjoner om de synes andre kan har nytte av det. Flere av de funksjoner skal vi går gjennom i et nytt kurs ‘R i produksjon’."
+    "text": "fellesR\nR-pakken fellesR er en samling av funksjoner som kan være nyttige for flere på SSB. Alle er velkomne til å bidra med egne funksjoner om de synes andre kan ha nytte av de. Flere av de funksjoner skal vi gå gjennom i et nytt kurs ‘R i produksjon’."
   },
   {
     "objectID": "videre.html#kurs-r-i-produksjon",
