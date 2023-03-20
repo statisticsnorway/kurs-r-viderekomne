@@ -7,6 +7,8 @@ editor: visual
 
 `klassR` pakken er utviklet i SSB for å lett hente ut klassifikasjoner og kodelister fra KLASS. Mer info om hvordan du kan bruke pakken ligger i en [introduksjon til klassR pakken](https://statisticsnorway.github.io/klassR/articles/klassR-vignette.html)
 
+<iframe src="https://ssbno.sharepoint.com/sites/S811/_layouts/15/embed.aspx?UniqueId=f20a3652-18e4-4396-86f8-3f929d656d4b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="klassR.mp4"></iframe>
+
 ## Metodebibliotek
 
 Seksjon for Metoder har samlet nyttige metodiske funksjoner for bruk i et statistikk produksjonsløp. Både interne og eksterne utviklet funksjoner er inkluderte og har blitt testet. Metodebiblioteket er under utvikling men er [tilgjengelig for alle på GitHub](https://statisticsnorway.github.io/metodebibliotek/).

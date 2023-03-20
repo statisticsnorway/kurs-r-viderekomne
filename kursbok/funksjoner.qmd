@@ -9,7 +9,7 @@ editor: visual
 
 ## Hva er en funksjon?
 
-En funksjon er en kodedel som kan brukes om og om igjen. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).
+En funksjon er en kodedel som kan brukes om og om igjen. De ligner på SAS-makroer og brukes til å automatisere prosesser. Den har en input (det som sendes inn til funksjonen) og en output (det som kommer ut).
 
 ![](./images/funksjon1.PNG)
 

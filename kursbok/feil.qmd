@@ -5,8 +5,9 @@ Feil kan klassifiseres som "kode" eller "tekniske" feil. Kodefeil oppstår når 
 
 ## Tips til feilsøking av kode
 ### Generelle
-- Kjør kode linje-ved-linje for å isolere feilen.
+- Kjør kode linje-ved-linje for å isolere feilen. Sjekk også etter røde kryss på venstre side av koden som indikere feil (om du jobber i RStudio). Av og til kommer disse kryss på linjer etter feilen, for eks. om parentes ikke er lukket.
 - Kopier feilmelding du får inn til google (rens bort variabel/datasett navn osv. først).
+- Sjekk om du har NA verdier i data og om det kan være årsaken til problemer. Håndtering funksjonen du kjøre NA verdier?
 - For skriving av egne funksjoner kan det hjelpe å sette inn noen print-setninger for å se hvor det stopper opp. Eller bruk debug(), en innebygd R funksjon. Les dokumentasjon for debug().
 - Sjekk at data er formatert som forventet (tibble vs. data.frame).
 - Prøv å spørre Chatgpt
