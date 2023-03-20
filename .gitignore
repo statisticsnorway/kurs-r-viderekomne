@@ -3,10 +3,11 @@
 .RData
 .Ruserdata
 
-/.quarto/
+
 /kursbok/.quarto/
 /kursbok/_site/
 /kursbok/_book/
+/kursbok/_freeze/
 
 
 # This .gitignore file is based on SSB's recommended gitignore template stored
@@ -211,3 +212,4 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
