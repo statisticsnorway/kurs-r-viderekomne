@@ -6,6 +6,7 @@
 
 
 renv::autoload()
+renv::restore()
 
 
 # Les inn pakken `esquisse` og wrapper-funksjone som er i en tilleggsfil.
