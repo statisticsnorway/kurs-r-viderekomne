@@ -1,0 +1,51 @@
+R er et godt verktøy for datavisualisering, og det finnes mange pakker som kan bidra til god dataformidling i R. R-pakker er en samling med spesifikke funksjoner laget for et bestemt formål. 
+
+## ggplot
+Et av de mest brukte datavisualiseringspakkene i R er 'ggplot2' som finnes i tidyverse universet av pakker. For å kunne bruke pakker i R må man huske å installere dem, det trenger man bare gjøre én gang, men man må laste inn pakken i hvert env man skal bruke den. 
+
+Det finnes utrolig mye man kan gjøre med ggplot, men man starter stort sett med et datasett. 
+```{r}
+install.packages('ggplot2')
+library(ggplot2)
+```
+
+
+
+```{r}
+kommune_list <- data.frame(sted = c("Oslo", "Kongsvinger", "Halden"), 
+                     snitt_lonn = c(636, 504, 552), 
+                     antall_lonnstakere = c(467400, 8300, 12600),
+                     nivaa = "Kommune")
+```
+Vi starter alltid med funksjonen ggplot() og så spesifiserer vi dataen vi har lyst til å plotte. Her er det dataen i kommune_list, hvor vi sier at sted skal plottes på x-aksen og antall_lonnstakere på y-aksen (vi kan spesifisere x = "" dersom vi for eksempel vil bytte rekkefølge). Deretter spesifiserer vi at det er et kolonne diagram vi vil lage, med geom_col(). 
+```{r}
+library(ggplot2)
+ggplot(kommune_list, aes(sted, antall_lonnstakere)) + 
+    geom_col()
+```
+Vi kan lage plott med mer en to dimensjoner ved å for eksempel også spesifisere farger, størrelse osv. 
+```{r}
+ggplot(kommune_list, aes(sted, snitt_lonn, size = antall_lonnstakere)) + 
+  geom_point()
+```
+Det er mye funskjonalitet som ligger i ggplot hvor man kan spesifisere tittelnavn, aksenavn, legende, farger o.l. 
+For å finne de forskjellige ggplot funksjonene for visualisering kan man sjekke ut [cheatsheet for diverse R pakker](https://posit.co/resources/cheatsheets/?type=posit-cheatsheets&_page=2/). 
+
+## plotly
+
+Plotly er en annen pakke i R, hovedforskjellen mellom plotly og ggplot er at plotly er noe lettere å lage interaktive plot med. 
+
+Igjen først må vi installere og laste inn pakken: 
+```{r}
+install.packages('plotly')
+library(plotly)
+```
+Vi kan lage interaktive plot i plotly, her et stoplediagram hvor vi kan hovere pilen over for å vå navn på hver kommune. 
+```{r}
+plot_ly(data = kommune_list, x = ~sted, y = ~snitt_lonn, type = "bar", text = ~antall_lonnstakere, 
+        textposition = "outside", marker = list(color = "green")) %>% 
+        layout(title = "Gjennomsnittslønn etter kommune", 
+        xaxis = list(title = "Kommune"), yaxis = list(title = "Gjennomsnittslønn"))
+
+```
+ Her ser vi at vi spesifiserer dataen vi skal bruke, hva som er x og hva som er y. Type kan være bar, scatter, line, heatmaps og mange flere. Text betyr den teksten vi vil skal vises når vi hoverer med pilen. Dette symbolet: %>% kaller vi pipe og er en funksjon som gjør at vi kan utføre flere funksjoner etter hverandre. Pipe brukes veldig ofte i R. I vårt eksempel har vi kjedet funksjon som lager plottet og funksjonen som definer layouten til plotet. 
