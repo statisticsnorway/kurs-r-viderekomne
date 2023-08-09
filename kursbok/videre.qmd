@@ -11,7 +11,7 @@ editor: visual
 
 ## Metodebibliotek
 
-Seksjon for Metoder har samlet nyttige metodiske funksjoner for bruk i et statistikk produksjonsløp. Både interne og eksterne utviklet funksjoner er inkluderte og har blitt testet. Metodebiblioteket er under utvikling men er [tilgjengelig for alle på GitHub](https://statisticsnorway.github.io/metodebibliotek/).
+Seksjon for Metoder har samlet nyttige metodiske funksjoner for bruk i et statistikk produksjonsløp. Både interne og eksterne utviklet funksjoner er inkluderte og har blitt testet. [Metodebiblioteket er under utvikling men er tilgjengelig for alle på GitHub](https://statisticsnorway.github.io/metodebiblioteket/).
 
 ## fellesR
 
